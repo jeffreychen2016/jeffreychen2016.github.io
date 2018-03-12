@@ -1,0 +1,93 @@
+/*------------------------------ Generic ------------------------------*/
+/* 
+*{
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+} */
+
+footer{
+    text-align: center;
+}
+/*------------------------------ Navigation Bar ------------------------------*/
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    border: grey 2px solid;
+    border-radius: 4px;
+    padding: 0;
+}
+
+nav ul{
+    margin: 0;
+}
+
+nav ul a{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul a:hover{
+    color:white;
+    background-color: green;
+}
+
+/*------------------------------ Project Card ------------------------------*/
+
+#project-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    width: 100%;
+}
+
+#project-container div{
+    width: 30%;
+    display:inline-block;
+    text-align: center;
+    border: grey 2px solid;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+/*------------------------------ Blog ------------------------------*/
+
+#blog-container div{
+    border: grey 2px solid;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+
+.float-left{
+    display: inline-block;
+    width: 40%;
+    float: left;
+    margin-left: 5px;
+}
+
+.float-right{
+    display: inline-block;
+    width: 40%;
+    float: right;
+    line-height: 28px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.clear-float{
+    clear: both;
+}
+
+
+
+
+
+
