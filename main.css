@@ -1,38 +1,90 @@
 /*------------------------------ Generic ------------------------------*/
-/* 
-*{
-    border: 2px solid black;
+
+body{ 
+    font-family: arial, Verdana, sans-serif;
+    background-color:rgb(233, 224, 224);
     margin: 0;
     padding: 0;
-} */
+}
 
 footer{
     text-align: center;
+    background-color: #333;
+    color: #cfcfcf;
+}
+
+html{
+    height: 100%;
 }
 /*------------------------------ Navigation Bar ------------------------------*/
 
-nav{
-    display: flex;
-    justify-content: flex-end;
-    border: grey 2px solid;
-    border-radius: 4px;
-    padding: 0;
-}
-
 nav ul{
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav ul a{
-    list-style: none;
-    display: inline-block;
-    padding: 10px;
+    text-decoration: none;
+    background-color: #333;
+    display: block;
+    color:#cfcfcf;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 nav ul a:hover{
-    color:white;
-    background-color: green;
+    background-color: black;
 }
+
+
+/*------------------------------ Resume Page ------------------------------*/
+#resume-container header ul{
+    list-style: none;
+    padding: 0;
+}
+
+#resume-container h1,
+#resume-container h2,
+#resume-container header ul{
+    text-align: center;
+}
+
+.resume-job-title,
+.resume-date{
+    margin: 0;
+}
+
+#resume-container header,
+.resume-section{
+    border:2px solid white;
+    border-radius: 6px;
+}
+
+.resume-section ul{
+    list-style-position: inside;
+    padding: 0;
+}
+
+.resume-job-title{
+    margin-left: 8px;
+}
+
+.resume-date{
+    margin-right: 8px;
+}
+
+.resume-date,
+.resume-section ul{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#resume-container .education p:not(.resume-date){
+    margin-left:8px;
+} 
+
+
 
 /*------------------------------ Project Card ------------------------------*/
 
@@ -59,7 +111,7 @@ img{
 
 /*------------------------------ Blog ------------------------------*/
 
-#blog-container div{
+/* #blog-container div{
     border: grey 2px solid;
     border-radius: 4px;
     margin: 5px 0;
@@ -84,10 +136,79 @@ img{
 
 .clear-float{
     clear: both;
+} */
+
+/*------------------------------ Media Queries ------------------------------*/
+
+@media(min-width : 900px){
+    /*------------------------------ Navigation Bar ------------------------------*/
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        border: grey 2px solid;
+        border-radius: 4px;
+        padding: 0;
+        background-color: #333;
+    }
+
+    nav ul{
+        margin: 0;
+    }
+
+    nav ul a{
+        /* list-style: none; */
+        display: inline-block;
+        padding: 10px;
+        /* text-decoration: none; */
+    }
+
+    nav ul a:hover{
+        color:white;
+        background-color: black;
+    }
+    /*------------------------------ Resume Page ------------------------------*/
+    #resume-container{
+        max-width: 1000px;
+        margin: auto;
+
+    }
+    #resume-container .section-title{
+        text-transform: uppercase;
+    }
+    
+    #resume-container h1{
+        margin: 0;
+        border-radius: 6px 6px 0 0;
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 0px;
+    }
+
+    #resume-container #personal-info{
+        text-align: center;
+        margin: 0;
+    }
+    
+    #resume-container #personal-info li{
+        display: inline-block;
+        margin: 0px 40px 20px 40px;
+    }
+    
+    #resume-container li{
+        margin-bottom: 5px;
+    }
+    
+    #resume-container .float-left{
+        float: left;
+    }
+    
+    #resume-container .float-right{
+        float: right;
+    }
+
+    #resume-container .float-clear{
+        clear:both;
+    } 
 }
-
-
-
-
 
 
