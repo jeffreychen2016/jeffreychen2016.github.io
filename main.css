@@ -59,11 +59,6 @@ nav ul a:hover{
     text-align: center;
 }
 
-.resume-job-title,
-.resume-date{
-    margin: 0;
-}
-
 #resume-container header,
 .resume-section{
     border:2px solid white;
@@ -79,9 +74,6 @@ nav ul a:hover{
     margin-left: 8px;
 }
 
-.resume-date{
-    margin-right: 8px;
-}
 
 .resume-date,
 .resume-section ul{
@@ -89,7 +81,7 @@ nav ul a:hover{
     margin-right: 8px;
 }
 
-#resume-container .education p:not(.resume-date){
+#resume-container .education p{
     margin-left:8px;
 } 
 
@@ -180,10 +172,8 @@ nav ul a:hover{
     }
 
     nav ul a{
-        /* list-style: none; */
         display: inline-block;
         padding: 10px;
-        /* text-decoration: none; */
     }
 
     nav ul a:hover{
