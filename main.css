@@ -24,7 +24,6 @@ footer{
     color: #cfcfcf;
 }
 
-
 /*------------------------------ Navigation Bar ------------------------------*/
 
 nav ul{
@@ -40,10 +39,15 @@ nav ul a{
     color:#cfcfcf;
     text-align: center;
     font-size: 1.2em;
+    transition: background-color 0.5s;
 }
 
 nav ul a:hover{
     background-color: black;
+}
+
+nav ul a.current-page{
+    border-bottom: 2px red solid;
 }
 
 
@@ -84,8 +88,6 @@ nav ul a:hover{
 #resume-container .education p{
     margin-left:8px;
 } 
-
-
 
 /*------------------------------ Project Card ------------------------------*/
 #project-container{
