@@ -23,12 +23,6 @@ function writeToDom(string,id){
     document.getElementById(id).innerHTML = string;
 }
 
-
-// <div id="blog-1">
-// <h2 class="float-left">blog1</h2>
-// <p class="float-right">date</p>
-// <p class="clear-float">details</p>
-// </div>
 function createBlogPosts(){
     var domString = '';
     for(var i = 0; i < blogs.length; i++){
