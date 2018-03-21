@@ -7,11 +7,14 @@ html{
 
 body{ 
     font-family: arial, Verdana, sans-serif;
-    background-color:rgb(233, 224, 224);
+    color: #cfcfcf;
+    /* background-color:rgb(233, 224, 224); */
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+    background-image: url('./imgs/background.jpg');
+    background-size: cover;
 }
 
 main{
@@ -22,9 +25,13 @@ footer{
     text-align: center;
     background-color: #333;
     color: #cfcfcf;
+    opacity: 0.5;
 }
 
 /*------------------------------ Navigation Bar ------------------------------*/
+nav{
+    opacity: 0.5;
+}
 
 nav ul{
     margin: 0;
@@ -36,6 +43,7 @@ nav ul a{
     text-decoration: none;
     background-color: #333;
     display: block;
+    /* background-color:rgb(233, 224, 224); */
     color:#cfcfcf;
     text-align: center;
     font-size: 1.2em;
@@ -47,11 +55,12 @@ nav ul a:hover{
 }
 
 nav ul a.current-page{
-    border-bottom: 2px red solid;
+    border-bottom: 2px solid #cfcfcf;
 }
 
 
 /*------------------------------ Resume Page ------------------------------*/
+
 #resume-container header ul{
     list-style: none;
     padding: 0;
@@ -77,7 +86,6 @@ nav ul a.current-page{
 .resume-job-title{
     margin-left: 8px;
 }
-
 
 .resume-date,
 .resume-section ul{
