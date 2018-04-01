@@ -23,6 +23,12 @@
         "title": "ES6, DOM Interaction, and markdown", 
         "date": "03/25/18", 
         "post": "This week, they were talking about ES6, DOM Interaction, and markdown. ES6 is pretty straight forward to me. It is just different syntax from ES5. Nothing special to talk about. However, DOM interaction is not that easy, especially the DOM traversing. When I watched the pre-work Tree-house toturial for this part, I was completely lost about what this thing is doing. Fortunately, when Collan went through this with an exmaple in class, and I went back to watch the tutorials again. It is now make perfect sense to me. DOM traversing is really useful when I deal with multiple elements that need to match up to each other. I can ulterlize the relationship between the elements to find whatever I am looking for."
+    },
+    {
+        "id": "blog5", 
+        "title": "XHR", 
+        "date": "04/01/18", 
+        "post": "This week, I was introduced a new important component of web development -- XHR. When I was watching the treehouse tutorial, it was bit of confusing. Especially the JSON concept. I was not able to disguish the difference between JSON format and other Javascript objects format. They just looked like the same. But now, it is really clear that the key of objects in JSON file must be quoted using double quote. For XHR, it is pretty straight forward. 1. Declare a new instance of XHR 2. Add eventlisteners to XHR for both success and failure of XHR execution. 3. Open data source which are JSON files in this case. 4. Send the request. The only difficult thing about this XHR concept is that the returned value is only available in the scope of the function that is being called, which means if there are multiple funtions that needs the data, then the XHR has to be created multiple times. Sometime it is kind of difficult to create it and get the data when working along with other codes"
     }
   ]
 }
