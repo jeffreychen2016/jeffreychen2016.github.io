@@ -1,63 +1,35 @@
-var projects = [
-    {
-        id: "project1", 
-        title: "Cool Project 1", 
-        imageUrl: "./imgs/project.jpg", 
-        description: "This is the best project",
-        githubUrl: "https://github.com/jeffreychen2016/jeffreychen2016.github.io"
-    },
-    {
-        id: "project2", 
-        title: "Cool Project 2", 
-        imageUrl: "./imgs/project.jpg", 
-        description: "This is the best project",
-        githubUrl: "https://github.com/jeffreychen2016/jeffreychen2016.github.io"
-    },
-    {
-        id: "project3", 
-        title: "Cool Project 3", 
-        imageUrl: "./imgs/project.jpg", 
-        description: "This is the best project",
-        githubUrl: "https://github.com/jeffreychen2016/jeffreychen2016.github.io"
-    },
-    {
-        id: "project4", 
-        title: "Cool Project 4", 
-        imageUrl: "./imgs/project.jpg", 
-        description: "This is the best project",
-        githubUrl: "https://github.com/jeffreychen2016/jeffreychen2016.github.io"
-    },
-    {
-        id: "project5", 
-        title: "Cool Project 5", 
-        imageUrl: "./imgs/project.jpg", 
-        description: "This is the best project",
-        githubUrl: "https://github.com/jeffreychen2016/jeffreychen2016.github.io"
-    },
-    {
-        id: "project6", 
-        title: "Cool Project 6", 
-        imageUrl: "./imgs/project.jpg", 
-        description: "This is the best project",
-        githubUrl: "https://github.com/jeffreychen2016/jeffreychen2016.github.io"
-    }
-  ];
+const writeToDom = (string,id)=>{
+    document.getElementById(id).innerHTML = string;
+}
 
-  function writeToDom(string,id){
-      document.getElementById(id).innerHTML = string;
-  }
-
-  function createProjectCards(){
-      var domString = '';
-      for(var i = 0; i < projects.length; i++){
-        domString += '<div>';
-        domString += '<h2>' + projects[i].title + '</h2>';
-        domString += '<img src ="' + projects[i].imageUrl + '">';
-        domString += '<p>' + projects[i].description + '</p>';
-        domString += '<p>' + projects[i].githubUrl + '</p>';
-        domString += '</div>'
+const createProjectCards = (data)=>{
+    let domString = '';
+    for(let i = 0; i < data.projects.length; i++){
+        domString += `<div>`;
+        domString += `<h2>${data.projects[i].title}</h2>`;
+        domString += `<img src ="${data.projects[i].imageUrl}">`;
+        domString += `<p>${data.projects[i].description}</p>`;
+        domString += `<p>${data.projects[i].githubUrl}</p>`;
+        domString += `</div>`;
       }
-      writeToDom(domString,'project-container');    
-  }
+    writeToDom(domString,'project-container');    
+}
 
-  createProjectCards();
+function executeOnSuccess(){
+    const data = JSON.parse(this.responseText);
+    createProjectCards(data);
+}
+
+function executeOnFail(){
+    console.log('XHR fails');
+}
+
+const runApplication = () => {
+    let xhrRequest = new XMLHttpRequest();
+    xhrRequest.addEventListener('load',executeOnSuccess);
+    xhrRequest.addEventListener("error", executeOnFail);
+    xhrRequest.open("GET","./db/projects.json");
+    xhrRequest.send();
+}
+
+runApplication();
