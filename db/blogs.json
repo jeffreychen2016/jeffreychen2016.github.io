@@ -29,6 +29,12 @@
         "title": "XHR", 
         "date": "04/01/18", 
         "post": "This week, I was introduced a new important component of web development -- XHR. When I was watching the treehouse tutorial, it was bit of confusing. Especially the JSON concept. I was not able to disguish the difference between JSON format and other Javascript objects format. They just looked like the same. But now, it is really clear that the key of objects in JSON file must be quoted using double quote. For XHR, it is pretty straight forward. 1. Declare a new instance of XHR 2. Add eventlisteners to XHR for both success and failure of XHR execution. 3. Open data source which are JSON files in this case. 4. Send the request. The only difficult thing about this XHR concept is that the returned value is only available in the scope of the function that is being called, which means if there are multiple funtions that needs the data, then the XHR has to be created multiple times. Sometime it is kind of difficult to create it and get the data when working along with other codes"
+    },
+    {
+        "id": "blog6", 
+        "title": "Bootstrap", 
+        "date": "04/09/18", 
+        "post": "Finally got to the point where we don't have to the vanilla JS and CSS. Boostrap is really straightforward. Just plug in the codes from the bootstrap site, then it is ready to go. It enables us to use much more advanced features that already built for you. I do not need to worry about the responsiveness of my site anymore since the grid system already taken care of it. Before I was allowed to use bootstrap, I had to write extra codes in order to make my site responsive which was really time consuming."
     }
   ]
 }
