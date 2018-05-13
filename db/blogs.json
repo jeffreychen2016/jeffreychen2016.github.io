@@ -1,40 +1,64 @@
 {
     "blogs":[
     {
-        "id": "blog1", 
-        "title": "HTML, CSS, Git, Github", 
-        "date": "02/27/18", 
+        "id": "blog1",
+        "title": "HTML, CSS, Git, Github",
+        "date": "02/27/18",
         "post": "For the first few classes, I was introduced to HTML,CSS,Git and Github. There is nothing special or new when talked about HTML and CSS in terms of what tags to use or how to stype the HTML page. However, what is new and really useful to me is the way Zoe did the first Zen-Garden project. She spent decent amount of time went throught the HTML layout then start doing the CSS. The work and logic flow is really clear this way. Moreover, I was also introduced to a new technology that is really powerful and useful -- Git and Github. They are version control technology. However, it is kind of difficult to understand at the first time since there is no user interface. It is very important to understand the logic behind each command"
     },
     {
-        "id": "blog2", 
-        "title": "JS", 
-        "date": "03/06/18", 
+        "id": "blog2",
+        "title": "JS",
+        "date": "03/06/18",
         "post": "This week, I was introduced to JavaScript. This is where we start making the website interactive. It involves concept of objects which I did not fully understand when I did my NSS preworks. After Zoe explained the basic concept and I worked through some challenge questions. It starts making more sense to me now."
     },
     {
-        "id": "blog3", 
-        "title": "Advanced JS", 
-        "date": "03/13/18", 
+        "id": "blog3",
+        "title": "Advanced JS",
+        "date": "03/13/18",
         "post": "This week, I was introduced more advanced javaScript techniques which involves looping through arrays,objects and creating custom functions. Function makes my codes more orgnized and clean, and I do not have to worry about the scope of variables. Before I know how to use the function, I had variable decleared all over the places cross the js file. Sometimes I forgot what I already declared and re-declare the varible which gave me a lof troubles. With function, whatever variable I declared only exist in the scope of current function. When I jump into other functions, I do not have to worry about what variable name I should use in order to prevent re-declaring variable"
     },
     {
-        "id": "blog4", 
-        "title": "ES6, DOM Interaction, and markdown", 
-        "date": "03/25/18", 
+        "id": "blog4",
+        "title": "ES6, DOM Interaction, and markdown",
+        "date": "03/25/18",
         "post": "This week, they were talking about ES6, DOM Interaction, and markdown. ES6 is pretty straight forward to me. It is just different syntax from ES5. Nothing special to talk about. However, DOM interaction is not that easy, especially the DOM traversing. When I watched the pre-work Tree-house toturial for this part, I was completely lost about what this thing is doing. Fortunately, when Collan went through this with an exmaple in class, and I went back to watch the tutorials again. It is now make perfect sense to me. DOM traversing is really useful when I deal with multiple elements that need to match up to each other. I can ulterlize the relationship between the elements to find whatever I am looking for."
     },
     {
-        "id": "blog5", 
-        "title": "XHR", 
-        "date": "04/01/18", 
+        "id": "blog5",
+        "title": "XHR",
+        "date": "04/01/18",
         "post": "This week, I was introduced a new important component of web development -- XHR. When I was watching the treehouse tutorial, it was bit of confusing. Especially the JSON concept. I was not able to disguish the difference between JSON format and other Javascript objects format. They just looked like the same. But now, it is really clear that the key of objects in JSON file must be quoted using double quote. For XHR, it is pretty straight forward. 1. Declare a new instance of XHR 2. Add eventlisteners to XHR for both success and failure of XHR execution. 3. Open data source which are JSON files in this case. 4. Send the request. The only difficult thing about this XHR concept is that the returned value is only available in the scope of the function that is being called, which means if there are multiple funtions that needs the data, then the XHR has to be created multiple times. Sometime it is kind of difficult to create it and get the data when working along with other codes"
     },
     {
-        "id": "blog6", 
-        "title": "Bootstrap", 
-        "date": "04/09/18", 
+        "id": "blog6",
+        "title": "Bootstrap",
+        "date": "04/09/18",
         "post": "Finally got to the point where we don't have to the vanilla JS and CSS. Boostrap is really straightforward. Just plug in the codes from the bootstrap site, then it is ready to go. It enables us to use much more advanced features that already built for you. I do not need to worry about the responsiveness of my site anymore since the grid system already taken care of it. Before I was allowed to use bootstrap, I had to write extra codes in order to make my site responsive which was really time consuming."
+    },
+    {
+        "id": "blog7",
+        "title": "Task Runners and Browserify",
+        "date": "04/17/18",
+        "post": "Task Runners and Browserify are two new tools to me. For Task Runner, we can use it to check out syntax, so we can ensure that there is no syntax error in our code before it makes to the browser. It it really useful and saved me a lot of time to debug my code. However, sometimes it causes problems for me. For one of my projects, I tried to use a Google Map API. I had to declare a new instance of the map obejct. Becuase the Task Runner requires me to declare the varibale (construct) before I can use it,I kept getting errors even though I can simply just create a new instance. In order to solve the issue, I had to remove some rules from the Task Runner. For Browserify, I got the concept that it is very useful in team environment. However, when doing a project by myself, it really makes things much more complicated. I had to worry about the circular dependency and a lot of time I had to flip JS files back forwards in order to see where I create the functions, and where I call them. In order to let the Browserify help me, I think I really have to have clear view of what my codes is doing, and how it connects to next piece. I think it will be easier once I have more practice on it"
+    },
+    {
+        "id": "blog8",
+        "title": "Task Runners and Browserify",
+        "date": "04/24/18",
+        "post": "After a week of practice, Task Runner and Browserify start making more sense to me. However, Task Runner sometimes still causes issue when I tried to use others people's codes. I had to re-format their codes so that they can pass the Task Runner's validation. It is good for long run, but sometimes it just gets annoying when I have 2000+ lines of code to re-format. For Browserify, once I know what I am doing with my codes, and how to connect them to next piece of codes, it is really not that complicated. All I need to do is planning out my project in well-originized tickets, and connect them together, and then create my JS files based on those tickets. It makes things very clear and logic flow straight-forward."
+    },
+    {
+        "id": "blog9",
+        "title": "Chatty group project",
+        "date": "05/01/18",
+        "post": "Got a chance to work with 3 of best students in the class. I felt kinda of nervous at first since I was afraid of that I may drag their legs and slow things down. However, when we started our planning for our group project at the first evening, we flought it throught. We had pretty good ideas on how we were going to break the project down to small managable pieces. We had some interesting conversation on some areas. For instance, one of my teammates wanted to retrive the data by reprinting entire array. I did not agree with it. I thought it will really impact performance this way since we only cared about the first and last element of the array. I was thinking of using whatever in DOM already and retrive only the last element and remove first element in the DOM. We dicussed it about 20 min, they finally agreed with my idea. However, when we presented it to our product owner, she likes to reprint the entire array, and the reason is that, when we get to the database part, this is a better approach. Even though my idea did not make to the end, but I felt like it was very good learning opporunity when I fought against other teammate for my ideas. The entire project was pretty straight forward, but it is kinda sad that I did not have chance to work on the color-pikcer and emoji-picker tickets. They looked really challenging. However, my teammates really killed them. They did really good job on those two. I really enjoyed the time that I worked with them and learnt a lot from them."
+    },
+    {
+        "id": "blog10",
+        "title": "Jquery",
+        "date": "05/15/18",
+        "post": "Finally got to this point where I do not have to use vanilla javascript. With JQuery, I have access to the large library where it holds tons of useful and powerful codes that other developers have came up. I do not have to write 20 lines of codes while doing AJAX, JQuery takes care of it with much less codes. I can not say much about JQuery since pretty much all of web developers in this planet are using it... so just get more practice on it, and learn to google JQuery codes efficiently."
     }
   ]
 }
