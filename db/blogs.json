@@ -59,6 +59,12 @@
         "title": "Jquery",
         "date": "05/15/18",
         "post": "Finally got to this point where I do not have to use vanilla javascript. With JQuery, I have access to the large library where it holds tons of useful and powerful codes that other developers have came up. I do not have to write 20 lines of codes while doing AJAX, JQuery takes care of it with much less codes. I can not say much about JQuery since pretty much all of web developers in this planet are using it... so just get more practice on it, and learn to google JQuery codes efficiently."
+    },
+    {
+        "id": "blog11",
+        "title": "Promises",
+        "date": "05/22/18",
+        "post": "The concept of promise is pretty straight forward. It helps you orgnize workflow in your code. For instance, if you have a funcation that needs the data from database or JSON file in order to execute successfully, by using promise properly, you will make your function wait for the data to be returned and then execute the function. Before I was introduced to this new tool. I really had hard time orgnizing my code. Every time when I dealt with data from JSON file, I had to worry about if the data got returned yet. Promise is really a good solution for this issue. The only downside of it is it's kinda confusing sometimes. Sometimes you just need to return the value from the first promise, and sometimes you have to return another promise. At this point, I am still struggling when to return what. However, with more pratice, I think I should be able to master it"
     }
   ]
 }
