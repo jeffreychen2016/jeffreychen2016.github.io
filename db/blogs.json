@@ -65,6 +65,12 @@
         "title": "Promises",
         "date": "05/22/18",
         "post": "The concept of promise is pretty straight forward. It helps you orgnize workflow in your code. For instance, if you have a funcation that needs the data from database or JSON file in order to execute successfully, by using promise properly, you will make your function wait for the data to be returned and then execute the function. Before I was introduced to this new tool. I really had hard time orgnizing my code. Every time when I dealt with data from JSON file, I had to worry about if the data got returned yet. Promise is really a good solution for this issue. The only downside of it is it's kinda confusing sometimes. Sometimes you just need to return the value from the first promise, and sometimes you have to return another promise. At this point, I am still struggling when to return what. However, with more pratice, I think I should be able to master it"
+    },
+    {
+        "id": "blog12",
+        "title": "APIs",
+        "date": "05/29/18",
+        "post": "APIs really make us interative developers. We finnaly got tool that we need to interact with other applications and other developers. The concept of using APIs is really straight forward. You get key and then calls the APIs with the valid key and parameters that API doc specified to get data in real time. The only tricky part of using APIs is hiding the API key. You do not want to make your keys open to public because some people may take the key and spam the API calls which will cause you economic lose. You may get bill for overly use your API keys.There are some good practices to keep your API key safe. For instance, you may want to disable the keys that have been there for a while, and get a new key periodically. You can also restrict keys for current domain, or IP, that way if someone gets your keys,he/she can not do much about it."
     }
   ]
 }
