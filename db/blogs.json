@@ -71,6 +71,12 @@
         "title": "APIs",
         "date": "05/29/18",
         "post": "APIs really make us interative developers. We finnaly got tool that we need to interact with other applications and other developers. The concept of using APIs is really straight forward. You get key and then calls the APIs with the valid key and parameters that API doc specified to get data in real time. The only tricky part of using APIs is hiding the API key. You do not want to make your keys open to public because some people may take the key and spam the API calls which will cause you economic lose. You may get bill for overly use your API keys.There are some good practices to keep your API key safe. For instance, you may want to disable the keys that have been there for a while, and get a new key periodically. You can also restrict keys for current domain, or IP, that way if someone gets your keys,he/she can not do much about it."
+    },
+    {
+        "id": "blog13",
+        "title": "Firebase",
+        "date": "06/05/18",
+        "post": "Firebase is very useful tool/database to store data of our application. The good thing about Firebase is that you can use javascript to send data to the database. Before I was introduced to this tool, I thought only back-end language can interact with data. Firebase really make our application useful. In addition, Firebase also supports file upload, meaning that not only it can store data, but also the files. We can probably use this feature to build some interesting tool. We only scratched the surface of the Firebase, so no too much comments at this point. However, I do have some questions that I want to find out about Firebase. For table keys, does it always return the hex value? Can we customize what it turns to our ajax call? The hex value is not human readable...and can we define composite keys, instead of using one column as primary key, can we have firebase retrun composite keys? I believe these questions are more related to back-end. However, if I can find some resource online. It will be really helpful"
     }
   ]
 }
