@@ -5,7 +5,7 @@ html{
     width: 100%;
 }
 
-body{ 
+body{
     font-family: arial, Verdana, sans-serif;
     color: #cfcfcf;
     /* background-color:rgb(233, 224, 224); */
@@ -13,7 +13,7 @@ body{
     padding: 0;
     height: 100%;
     width: 100%;
-    background-image: url('./imgs/background.jpg');
+    background-image: url('../imgs/background.jpg');
     background-size: cover;
 }
 
@@ -94,7 +94,7 @@ nav ul a.current-page{
 
 #resume-container .education p{
     margin-left:8px;
-} 
+}
 
 /*------------------------------ Project Card ------------------------------*/
 #project-container{
@@ -198,7 +198,7 @@ nav ul a.current-page{
     #resume-container .section-title{
         text-transform: uppercase;
     }
-    
+
     #resume-container .resume-section h1{
         margin: 0;
         border-radius: 6px 6px 0 0;
@@ -211,27 +211,27 @@ nav ul a.current-page{
         text-align: center;
         margin: 0;
     }
-    
+
     #resume-container #personal-info li{
         display: inline-block;
         margin: 0px 40px 20px 40px;
     }
-    
+
     #resume-container li{
         margin-bottom: 5px;
     }
-    
+
     #resume-container .float-left{
         float: left;
     }
-    
+
     #resume-container .float-right{
         float: right;
     }
 
     #resume-container .float-clear{
         clear:both;
-    } 
+    }
 }
 
 
