@@ -28,6 +28,15 @@ footer{
     opacity: 0.5;
 }
 
+.glyphicon{
+    top: 2px;
+}
+
+button{
+    background-color: #cfcfcf;
+    opacity: 0.5;
+}
+
 /*------------------------------ Navigation Bar ------------------------------*/
 nav{
     opacity: 0.5;
@@ -147,12 +156,12 @@ nav ul a.current-page{
     display: inline-block;
     width: 40%;
     float: left;
+    margin-top: 0;
     margin-left: 5px;
 }
 
 #blog-container .float-right{
     display: inline-block;
-    width: 40%;
     float: right;
     line-height: 2em;
     text-align: right;
