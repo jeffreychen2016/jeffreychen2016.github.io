@@ -37,15 +37,19 @@ const navigatePageEvent = () => {
 
 // GET
 // Get blog data from database and display on the page
+const getBlogs = () => {
+  firebaseAPI.getBlogsFromDB()
+    .then((blogData) => {
+      dom.printBlogs(blogData);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+
 const getBlogsFromDBEvent = () => {
   $(document).on('click','#blog-page-link', () => {
-    firebaseAPI.getBlogsFromDB()
-      .then((blogData) => {
-        dom.printBlogs(blogData);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    getBlogs();
   });
 };
 
@@ -64,7 +68,23 @@ const postBlogToDBEvent = () => {
     firebaseAPI.postBlogToDB(blogToPost)
       .then((uniqueKey) => {
         console.log('Blog Posted');
-        getBlogsFromDBEvent();
+        getBlogs();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+};
+
+// DELETE
+// Delete blog from database
+const delelteBlogFromDBEvent = () => {
+  $(document).on('click','.btn-delete-blog', (e) => {
+    const blogIdToDelete = $(e.target).closest('.blog-card').data('firebaseId');
+    firebaseAPI.delelteBlogFromDB(blogIdToDelete)
+      .then(() => {
+        console.log('Deleted');
+        getBlogs();
       })
       .catch((err) => {
         console.error(err);
@@ -76,4 +96,5 @@ module.exports = {
   getBlogsFromDBEvent,
   navigatePageEvent,
   postBlogToDBEvent,
+  delelteBlogFromDBEvent,
 };
