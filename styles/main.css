@@ -172,6 +172,12 @@ nav ul a.current-page{
     clear: both;
 }
 
+/*------------------------------ Modal ------------------------------*/
+#input-blog-content{
+    height: 200px;
+}
+
+
 /*------------------------------ Media Queries ------------------------------*/
 
 @media(min-width : 900px){

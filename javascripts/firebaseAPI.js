@@ -39,7 +39,25 @@ const getBlogsFromDB = () => {
   });
 };
 
+// Post blog to database
+const postBlogToDB = (blogToPost) => {
+  return new Promise((resolve,reject) => {
+    $.ajax({
+      method: 'POST',
+      url: `${firebaseConfig.apiKeys.firebaseDB.databaseURL}/blogs.json`,
+      data: JSON.stringify(blogToPost),
+    })
+      .done((uniqueKey) => {
+        resolve(uniqueKey);
+      })
+      .fail((err) => {
+        reject(err);
+      });
+  });
+};
+
 module.exports = {
   getFirebseConfig,
   getBlogsFromDB,
+  postBlogToDB,
 };
