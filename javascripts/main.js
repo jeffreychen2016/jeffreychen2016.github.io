@@ -6,6 +6,7 @@ const initializeApp = () => {
   events.navigatePageEvent();
   events.getBlogsFromDBEvent();
   events.postBlogToDBEvent();
+  events.delelteBlogFromDBEvent();
 };
 
 initializeApp();

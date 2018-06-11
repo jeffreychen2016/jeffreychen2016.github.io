@@ -56,8 +56,26 @@ const postBlogToDB = (blogToPost) => {
   });
 };
 
+// DELETE
+// Delete blog from database
+const delelteBlogFromDB = (blogId) => {
+  return new Promise((resolve,reject) => {
+    $.ajax({
+      method: 'DELETE',
+      url: `${firebaseConfig.apiKeys.firebaseDB.databaseURL}/blogs/${blogId}.json`,
+    })
+      .done(() => {
+        resolve();
+      })
+      .fail((err) => {
+        reject(err);
+      });
+  });
+};
+
 module.exports = {
   getFirebseConfig,
   getBlogsFromDB,
   postBlogToDB,
+  delelteBlogFromDB,
 };
