@@ -36,6 +36,7 @@ const navigatePageEvent = () => {
 };
 
 // GET
+// Get blog data from database and display on the page
 const getBlogsFromDBEvent = () => {
   $(document).on('click','#blog-page-link', () => {
     firebaseAPI.getBlogsFromDB()
@@ -48,7 +49,31 @@ const getBlogsFromDBEvent = () => {
   });
 };
 
+// POST
+// Post new blog entry to the database
+const postBlogToDBEvent = () => {
+  $(document).on('click','#btn-post-blog', (e) => {
+    e.preventDefault();
+    const blogToPost = {
+      id: 1,
+      title: $('#input-blog-title').val(),
+      post: $('#input-blog-content').val(),
+      date: '2018-01-01',
+    };
+
+    firebaseAPI.postBlogToDB(blogToPost)
+      .then((uniqueKey) => {
+        console.log('Blog Posted');
+        getBlogsFromDBEvent();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+};
+
 module.exports = {
   getBlogsFromDBEvent,
   navigatePageEvent,
+  postBlogToDBEvent,
 };

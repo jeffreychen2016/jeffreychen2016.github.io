@@ -5,6 +5,7 @@ const initializeApp = () => {
   firebaseAPI.getFirebseConfig();
   events.navigatePageEvent();
   events.getBlogsFromDBEvent();
+  events.postBlogToDBEvent();
 };
 
 initializeApp();
