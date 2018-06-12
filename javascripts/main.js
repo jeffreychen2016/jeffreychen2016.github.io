@@ -7,6 +7,8 @@ const initializeApp = () => {
   events.getBlogsFromDBEvent();
   events.postBlogToDBEvent();
   events.delelteBlogFromDBEvent();
+  events.updateBlogInDBEvent();
+  events.getBlogIdForUpdateEvent();
 };
 
 initializeApp();

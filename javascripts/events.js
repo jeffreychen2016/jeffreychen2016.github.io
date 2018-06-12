@@ -60,8 +60,8 @@ const postBlogToDBEvent = () => {
     e.preventDefault();
     const blogToPost = {
       id: 1,
-      title: $('#input-blog-title').val(),
-      post: $('#input-blog-content').val(),
+      title: $('#input-blog-title-add').val(),
+      post: $('#input-blog-content-add').val(),
       date: '2018-01-01',
     };
 
@@ -92,9 +92,42 @@ const delelteBlogFromDBEvent = () => {
   });
 };
 
+// UPDATE
+// Edit the existing blog in database
+let blogIdForUpdate = '';
+
+const getBlogIdForUpdateEvent = () => {
+  $(document).on('click','.btn-edit-blog',(e) => {
+    blogIdForUpdate = $(e.target).closest('.blog-card').data('firebaseId');
+  });
+};
+
+const updateBlogInDBEvent = () => {
+  $(document).on('click','#btn-edit-blog', (e) => {
+    e.preventDefault();
+    const blogIdToUpdate = blogIdForUpdate;
+    const blogToUpdate = {
+      id: 1,
+      title: $('#input-blog-title-edit').val(),
+      post: $('#input-blog-content-edit').val(),
+      date: '2018-01-01',
+    };
+
+    firebaseAPI.updateBlogInDB(blogToUpdate,blogIdToUpdate)
+      .then(() => {
+        getBlogs();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+};
+
 module.exports = {
   getBlogsFromDBEvent,
   navigatePageEvent,
   postBlogToDBEvent,
   delelteBlogFromDBEvent,
+  updateBlogInDBEvent,
+  getBlogIdForUpdateEvent,
 };
