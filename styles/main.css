@@ -42,6 +42,7 @@ nav{
     opacity: 0.5;
 }
 
+/*
 nav ul{
     margin: 0;
     padding: 0;
@@ -52,7 +53,6 @@ nav ul a{
     text-decoration: none;
     background-color: #333;
     display: block;
-    /* background-color:rgb(233, 224, 224); */
     color:#cfcfcf;
     text-align: center;
     font-size: 1.2em;
@@ -61,10 +61,12 @@ nav ul a{
 
 nav ul a:hover{
     background-color: black;
-}
+}*/
 
-nav ul a.current-page{
-    border-bottom: 2px solid #cfcfcf;
+nav .current-page{
+    border-bottom: 2px solid black;
+    background: wheat;
+    opacity: 1;
 }
 
 
@@ -173,7 +175,8 @@ nav ul a.current-page{
 }
 
 /*------------------------------ Modal ------------------------------*/
-#input-blog-content{
+#input-blog-content-add,
+#input-blog-content-edit{
     height: 200px;
 }
 
