@@ -73,9 +73,28 @@ const delelteBlogFromDB = (blogId) => {
   });
 };
 
+// UPDATE
+// Edit the existing blog in database
+const updateBlogInDB = (blogToUpdate,blogIdToUpdate) => {
+  return new Promise((resolve,reject) => {
+    $.ajax({
+      method: 'PUT',
+      url: `${firebaseConfig.apiKeys.firebaseDB.databaseURL}/blogs/${blogIdToUpdate}.json`,
+      data: JSON.stringify(blogToUpdate),
+    })
+      .done(() => {
+        resolve();
+      })
+      .fail((err) => {
+        reject(err);
+      });
+  });
+};
+
 module.exports = {
   getFirebseConfig,
   getBlogsFromDB,
   postBlogToDB,
   delelteBlogFromDB,
+  updateBlogInDB,
 };
