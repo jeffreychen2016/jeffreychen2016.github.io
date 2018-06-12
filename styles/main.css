@@ -38,34 +38,15 @@ button{
 }
 
 /*------------------------------ Navigation Bar ------------------------------*/
-nav{
-    opacity: 0.5;
+#nav-bar{
+    opacity: 0.8;
+    background-color: transparent;
+    background: transparent;
+    color: #cfcfcf;
 }
 
-/*
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul a{
-    text-decoration: none;
-    background-color: #333;
-    display: block;
-    color:#cfcfcf;
-    text-align: center;
-    font-size: 1.2em;
-    transition: background-color 0.5s;
-}
-
-nav ul a:hover{
-    background-color: black;
-}*/
-
-nav .current-page{
-    border-bottom: 2px solid black;
-    background: wheat;
+#nav-bar .current-page{
+    background: #fff;
     opacity: 1;
 }
 
@@ -185,7 +166,7 @@ nav .current-page{
 
 @media(min-width : 900px){
     /*------------------------------ Navigation Bar ------------------------------*/
-    nav{
+    /* nav{
         display: flex;
         justify-content: flex-end;
         border: grey 2px solid;
@@ -206,7 +187,7 @@ nav .current-page{
     nav ul a:hover{
         color:white;
         background-color: black;
-    }
+    } */
     /*------------------------------ Resume Page ------------------------------*/
     #resume-container{
         max-width: 1000px;
