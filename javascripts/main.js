@@ -9,6 +9,7 @@ const initializeApp = () => {
   events.delelteBlogFromDBEvent();
   events.updateBlogInDBEvent();
   events.getBlogIdForUpdateEvent();
+  events.getProjectsFromDBEvent();
 };
 
 initializeApp();

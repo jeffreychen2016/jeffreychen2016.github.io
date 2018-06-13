@@ -35,6 +35,7 @@ const navigatePageEvent = () => {
   });
 };
 
+/* ----------------------- Blog Section --------------------- */
 // GET
 // Get blog data from database and display on the page
 const getBlogs = () => {
@@ -123,6 +124,25 @@ const updateBlogInDBEvent = () => {
   });
 };
 
+/* ----------------------- Project Section --------------------- */
+// GET
+// Get project data from database and display on the page
+const getProjects = () => {
+  firebaseAPI.getProjectsFromDB()
+    .then((projectData) => {
+      dom.printProjects(projectData);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+
+const getProjectsFromDBEvent = () => {
+  $(document).on('click','#project-page-link', () => {
+    getProjects();
+  });
+};
+
 module.exports = {
   getBlogsFromDBEvent,
   navigatePageEvent,
@@ -130,4 +150,5 @@ module.exports = {
   delelteBlogFromDBEvent,
   updateBlogInDBEvent,
   getBlogIdForUpdateEvent,
+  getProjectsFromDBEvent,
 };

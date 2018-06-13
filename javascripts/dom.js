@@ -15,6 +15,20 @@ const printBlogs = (blogData) => {
   $('#blog-container').html(domString);
 };
 
+const printProjects = (projectData) => {
+  let domString = '';
+  for (let i = 0; i < projectData.projects.length; i++) {
+    domString += `<div>`;
+    domString += `<h2>${projectData.projects[i].title}</h2>`;
+    domString += `<img src ="${projectData.projects[i].imageUrl}">`;
+    domString += `<p>${projectData.projects[i].description}</p>`;
+    domString += `<p>${projectData.projects[i].githubUrl}</p>`;
+    domString += `</div>`;
+  }
+  $('#project-container').html(domString);
+};
+
 module.exports = {
   printBlogs,
+  printProjects,
 };
