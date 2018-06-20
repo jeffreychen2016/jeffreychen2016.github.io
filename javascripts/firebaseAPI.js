@@ -15,6 +15,7 @@ const getFirebseConfig = () => {
   });
 };
 
+/* ---------------- Blog Section ------------------ */
 // GET
 // retrieve blog data from Firebase database
 const getBlogsFromDB = () => {
@@ -91,10 +92,54 @@ const updateBlogInDB = (blogToUpdate,blogIdToUpdate) => {
   });
 };
 
+/* ---------------- Project Section ------------------ */
+// GET
+// retrieve blog data from Firebase database
+const getProjectsFromDB = () => {
+  return new Promise((resolve,reject) => {
+    const projectsArray = [];
+    $.ajax({
+      method: 'GET',
+      url: `${firebaseConfig.apiKeys.firebaseDB.databaseURL}/projects.json`,
+    })
+      .done((projectData) => {
+        if (projectData !== null) {
+          Object.keys(projectData).forEach((fbKey) => {
+            projectData[fbKey].id = fbKey;
+            projectsArray.push(projectData[fbKey]);
+          });
+        };
+        resolve(projectsArray);
+      })
+      .fail((err) => {
+        reject(err);
+      });
+  });
+};
+
+// Post project to database
+const postProjectToDB = (projectToPost) => {
+  return new Promise((resolve,reject) => {
+    $.ajax({
+      method: 'POST',
+      url: `${firebaseConfig.apiKeys.firebaseDB.databaseURL}/projects.json`,
+      data: JSON.stringify(projectToPost),
+    })
+      .done((uniqueKey) => {
+        resolve(uniqueKey);
+      })
+      .fail((err) => {
+        reject(err);
+      });
+  });
+};
+
 module.exports = {
   getFirebseConfig,
   getBlogsFromDB,
   postBlogToDB,
   delelteBlogFromDB,
   updateBlogInDB,
+  getProjectsFromDB,
+  postProjectToDB,
 };
