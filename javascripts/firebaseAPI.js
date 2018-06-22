@@ -1,3 +1,5 @@
+const auth = require('./auth');
+
 let firebaseConfig = {};
 
 const getFirebseConfig = () => {
@@ -5,7 +7,8 @@ const getFirebseConfig = () => {
     $.ajax('../db/apiKeys.json')
       .done((config) => {
         // initialize firebase
-        firebase.initializeApp(config.firebaseDB);
+        firebase.initializeApp(config.apiKeys.firebaseDB);
+        auth.checkLoginStatus();
         firebaseConfig = config;
         resolve(config);
       })

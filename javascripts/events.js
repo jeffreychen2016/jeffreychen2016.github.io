@@ -18,7 +18,7 @@ const currentPageIndicator = (activePage) => {
 };
 
 const navigatePageEvent = () => {
-  $(document).on('click',(e) => {
+  $(document).on('click', (e) => {
     if (e.target.id === 'resume-page-link') {
       hideOtherPages('resume-page');
       currentPageIndicator('resume-page');
@@ -49,7 +49,7 @@ const getBlogs = () => {
 };
 
 const getBlogsFromDBEvent = () => {
-  $(document).on('click','#blog-page-link', () => {
+  $(document).on('click', '#blog-page-link', () => {
     getBlogs();
   });
 };
@@ -57,7 +57,7 @@ const getBlogsFromDBEvent = () => {
 // POST
 // Post new blog entry to the database
 const postBlogToDBEvent = () => {
-  $(document).on('click','#btn-post-blog', (e) => {
+  $(document).on('click', '#btn-post-blog', (e) => {
     e.preventDefault();
     const blogToPost = {
       id: 1,
@@ -80,7 +80,7 @@ const postBlogToDBEvent = () => {
 // DELETE
 // Delete blog from database
 const delelteBlogFromDBEvent = () => {
-  $(document).on('click','.btn-delete-blog', (e) => {
+  $(document).on('click', '.btn-delete-blog', (e) => {
     const blogIdToDelete = $(e.target).closest('.blog-card').data('firebaseId');
     firebaseAPI.delelteBlogFromDB(blogIdToDelete)
       .then(() => {
@@ -98,13 +98,13 @@ const delelteBlogFromDBEvent = () => {
 let blogIdForUpdate = '';
 
 const getBlogIdForUpdateEvent = () => {
-  $(document).on('click','.btn-edit-blog',(e) => {
+  $(document).on('click', '.btn-edit-blog', (e) => {
     blogIdForUpdate = $(e.target).closest('.blog-card').data('firebaseId');
   });
 };
 
 const updateBlogInDBEvent = () => {
-  $(document).on('click','#btn-edit-blog', (e) => {
+  $(document).on('click', '#btn-edit-blog', (e) => {
     e.preventDefault();
     const blogIdToUpdate = blogIdForUpdate;
     const blogToUpdate = {
@@ -114,7 +114,7 @@ const updateBlogInDBEvent = () => {
       date: '2018-01-01',
     };
 
-    firebaseAPI.updateBlogInDB(blogToUpdate,blogIdToUpdate)
+    firebaseAPI.updateBlogInDB(blogToUpdate, blogIdToUpdate)
       .then(() => {
         getBlogs();
       })
@@ -138,8 +138,49 @@ const getProjects = () => {
 };
 
 const getProjectsFromDBEvent = () => {
-  $(document).on('click','#project-page-link', () => {
+  $(document).on('click', '#project-page-link', () => {
     getProjects();
+  });
+};
+
+/* ----------------------- Authentication --------------------- */
+const authenticationEvent = () => {
+  // sign in
+  $(document).on('click', '#btn-admin-signin', (e) => {
+    e.preventDefault();
+
+    const email = $('#signin-email').val();
+    const pass = $('#signin-password').val();
+    // calling auth services of firebase
+    // pass in email and password
+    // firebase will return a promise
+    firebase.auth().signInWithEmailAndPassword(email, pass)
+      // not using returned user object
+      // do not need .then here since it is managed by the auth state changing
+      // in checkLoginStatus *******
+      .then((user) => {
+        // Sign-in successful.
+        // move this code to auth module -------
+      })
+      .catch((error) => {
+        // Handle Errors here. When get error on sign-in
+        // var errorCode = error.code;
+        const errorMessage = error.message;
+        $('#signin-error').removeClass('hide').hide().fadeIn(600);
+        $('#signin-error-msg').text(errorMessage);
+      });
+  });
+
+  // sign out
+  $(document).on('click', '#btn-admin-signout', (e) => {
+    firebase.auth().signOut()
+      .then(() => {
+        // Sign-out successful.
+        // move this code to auth module -------
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   });
 };
 
@@ -151,4 +192,5 @@ module.exports = {
   updateBlogInDBEvent,
   getBlogIdForUpdateEvent,
   getProjectsFromDBEvent,
+  authenticationEvent,
 };
