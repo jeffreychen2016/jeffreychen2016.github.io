@@ -1,3 +1,5 @@
+const auth = require('./auth');
+
 const printBlogs = (blogData) => {
   let domString = '';
   for (let i = 0; i < blogData.length; i++) {
@@ -5,14 +7,15 @@ const printBlogs = (blogData) => {
     domString +=  `<h2 class="float-left">${blogData[i].title}</h2>`;
     // domString += `<p class="float-right">${blogData[i].date}</p>`;
     domString +=  `<div class="btn-group btn-group-blog float-right" role="group" aria-label="...">`;
-    // domString +=    `<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal-add"><span class='glyphicon glyphicon-plus'></span>Add</button>`;
-    // domString +=    `<button type="button" class="btn btn-default btn-edit-blog" data-toggle="modal" data-target="#myModal-edit"><span class='glyphicon glyphicon-pencil'></span>Edit</button>`;
-    // domString +=    `<button type="button" class="btn btn-default btn-delete-blog"><span class='glyphicon glyphicon-trash'></span>Delete</button>`;
     domString +=  `</div>`;
     domString +=  `<p class="clear-float">${blogData[i].post}</p>`;
     domString += `</div>`;
   }
   $('#blog-container').html(domString);
+
+  // check if admin is log in
+  // if log in then display buttons
+  auth.checkLoginStatus();
 };
 
 const printProjects = (projectData) => {
