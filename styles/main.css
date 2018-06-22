@@ -37,6 +37,10 @@ button{
     opacity: 0.5;
 }
 
+.hide {
+    display: none;
+}
+
 /*------------------------------ Navigation Bar ------------------------------*/
 #nav-bar{
     opacity: 0.8;

@@ -10,6 +10,7 @@ const initializeApp = () => {
   events.updateBlogInDBEvent();
   events.getBlogIdForUpdateEvent();
   events.getProjectsFromDBEvent();
+  events.authenticationEvent();
 };
 
 initializeApp();
