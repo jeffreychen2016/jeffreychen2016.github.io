@@ -39,13 +39,13 @@ p {
 /* ------------------- Header Showcase ------------------- */
 
 #nav-bar {
-    background: transparent;
     border: none;
     margin-bottom: 0px;
 }
 
 
 #showcase {
+    margin-top: 50px;
     min-height: 50vh;
     color: #fff;
     text-align: center;
