@@ -1,240 +1,174 @@
-/*------------------------------ Generic ------------------------------*/
-
-html{
-    height: 100%;
-    width: 100%;
-}
-
-body{
-    font-family: arial, Verdana, sans-serif;
-    color: #cfcfcf;
-    /* background-color:rgb(233, 224, 224); */
+/* ------------------- Generic ------------------- */
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url('../imgs/background.jpg');
-    background-size: cover;
-}
-
-main{
-    min-height: 100%;
-}
-
-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
     text-align: center;
-    background-color: #333;
-    color: #cfcfcf;
-    opacity: 0.5;
 }
 
-.glyphicon{
-    top: 2px;
+img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-button{
-    background-color: #cfcfcf;
-    opacity: 0.5;
+h1,h2,h3 {
+    margin: 0;
+    padding: 1em 0;
 }
 
-.hide {
-    display: none;
+p {
+    margin: 0;
+    padding: 1em 0;
 }
 
-/*------------------------------ Navigation Bar ------------------------------*/
-#nav-bar{
-    opacity: 0.8;
-    background-color: transparent;
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+}
+
+
+/* ------------------- Header Showcase ------------------- */
+
+#nav-bar {
     background: transparent;
-    color: #cfcfcf;
-}
-
-#nav-bar .current-page{
-    background: #fff;
-    opacity: 1;
+    border: none;
+    margin-bottom: 0px;
 }
 
 
-/*------------------------------ Resume Page ------------------------------*/
-
-#resume-container .resume-section ul{
-    list-style: none;
-    padding: 0;
-}
-
-#resume-container h1,
-#resume-container h2,
-#resume-container .resume-personal-info ul{
+#showcase {
+    min-height: 50vh;
+    color: #fff;
     text-align: center;
 }
 
-.resume-section{
-    border:2px solid #cfcfcf;
-    border-radius: 6px;
-}
-
-.resume-section ul{
-    list-style-position: inside;
-    padding: 0;
-}
-
-.resume-job-title{
-    margin-left: 8px;
-}
-
-.resume-date,
-.resume-section ul{
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-#resume-container .education p{
-    margin-left:8px;
-}
-
-/*------------------------------ Project Card ------------------------------*/
-#project-container{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content:space-evenly;
+#showcase .bg-image {
+    position: absolute;
+    background-color: #333;
+    background-image: url('../imgs/black-and-white-blur-gray-34088.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 100%;
+    height: 50vh;
+    z-index: -1;
+    opacity: 0.5;
 }
 
-#project-container div{
-    width: 30%;
+#showcase p {
+    border-right: 1px solid  black;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2em;
+    padding: 0;
+    width: 0;
+    display: block;
+    margin: auto;
+}
+
+#showcase p:nth-child(2) {
+    width: 12.86em;
+    animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+    animation-fill-mode: forwards;
+}
+
+#showcase p:nth-child(3) {
+    width: 14.15em;
+    opacity: 0;
+    animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#showcase p:nth-child(4) {
+    width: 11.89em;
+    opacity: 0;
+    animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+#showcase p:nth-child(5) {
+    width: 11.43em;
+    opacity: 0;
+    animation: type-endline 2s steps(40, end), blink .5s step-end infinite alternate;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type-endline {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* ------------------- Section a  ------------------- */
+
+#section-a,
+#section-b {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+    height: 100vh;
+}
+
+
+/* ------------------- Footer ------------------- */
+
+#main-footer {
+    padding: 2em;
+    background: #000000;
+    color: #fff;
     text-align: center;
-    border: grey 2px solid;
-    border-radius: 4px;
-    margin: 5px 0;
-    min-width: 386px;
 }
 
-#project-header{
-    text-align: center;
-}
+/* Media Queries */
 
-#project-container img{
-    width: 50%;
-    height: 50%;
-}
-
-/*------------------------------ Blog ------------------------------*/
-#blog-header{
-    text-align: center;
-}
-
-#blog-container{
-    width: 80%;
-    margin: 5px auto;
-}
-
-#blog-container p{
-    text-indent: 50px;
-}
-
-#blog-container div{
-    border: grey 2px solid;
-    border-radius: 4px;
-    margin: 5px auto;
-}
-
-
-#blog-container .float-left{
-    display: inline-block;
-    width: 40%;
-    float: left;
-    margin-top: 0;
-    margin-left: 5px;
-}
-
-#blog-container .float-right{
-    display: inline-block;
-    float: right;
-    line-height: 2em;
-    text-align: right;
-    margin-right: 5px;
-}
-
-#blog-container .clear-float{
-    clear: both;
-}
-
-/*------------------------------ Modal ------------------------------*/
-#input-blog-content-add,
-#input-blog-content-edit{
-    height: 200px;
-}
-
-
-/*------------------------------ Media Queries ------------------------------*/
-
-@media(min-width : 900px){
-    /*------------------------------ Navigation Bar ------------------------------*/
-    /* nav{
-        display: flex;
-        justify-content: flex-end;
-        border: grey 2px solid;
-        border-radius: 4px;
-        padding: 0;
-        background-color: #333;
+/* @media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
-    nav ul{
-        margin: 0;
-    }
-
-    nav ul a{
-        display: inline-block;
-        padding: 10px;
-    }
-
-    nav ul a:hover{
-        color:white;
-        background-color: black;
-    } */
-    /*------------------------------ Resume Page ------------------------------*/
-    #resume-container{
-        max-width: 1000px;
-        margin: auto;
-
-    }
-    #resume-container .section-title{
-        text-transform: uppercase;
-    }
-
-    #resume-container .resume-section h1{
-        margin: 0;
-        border-radius: 6px 6px 0 0;
-        text-align: center;
-        padding: 5px;
-        margin-bottom: 0px;
-    }
-
-    #resume-container #personal-info{
-        text-align: center;
-        margin: 0;
-    }
-
-    #resume-container #personal-info li{
-        display: inline-block;
-        margin: 0px 40px 20px 40px;
-    }
-
-    #resume-container li{
-        margin-bottom: 5px;
-    }
-
-    #resume-container .float-left{
-        float: left;
-    }
-
-    #resume-container .float-right{
-        float: right;
-    }
-
-    #resume-container .float-clear{
-        clear:both;
-    }
-}
-
-
+} */
