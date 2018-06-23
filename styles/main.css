@@ -144,15 +144,63 @@ p {
 }
 
 
-/* ------------------- Section a  ------------------- */
+/* ------------------- Sections  ------------------- */
 
 #section-a,
 #section-b {
     background: #eaeaea;
     color: #333;
     padding-bottom: 2em;
-    height: 100vh;
+    height: 80vh;
+    width: 100%;
 }
+
+/* ------------------- Section - a -blog  ------------------- */
+.blogs-wrappper {
+    border: black 2px solid;
+}
+
+.blog-card {
+    width:80%;
+    border: black 2px solid;
+    margin: 5px auto;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-date,
+.blog-read-detail {
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+}
+
+.blog-title {
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    transition: transform 1s;
+}
+
+.blog-read-detail {
+    left: 100%;
+}
+
+.blog-card:hover .blog-date,
+.blog-card:hover .blog-read-detail {
+    transform: translateX(-100%);
+}
+
+.blog-card:hover .blog-title {
+    transform: translateX(-53.846154%); /* 35% / 65%  */
+    background-color: red;
+}
+
 
 
 /* ------------------- Footer ------------------- */
