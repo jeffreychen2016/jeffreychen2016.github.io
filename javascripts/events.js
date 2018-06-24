@@ -30,13 +30,14 @@ const getBlogsEvent = () => {
   };
 };
 
-const displayBlogDetailEvent = () => {
-  $(document).on('click', '.blog-read-detail', (e) => {
-    $(e.target).closest('.blog-card-wrapper').find('.blog-detail').removeClass('hide').hide().fadeIn(600);
+const printBlogDetailToModal = () => {
+  $(document).on('click','.blog-read-detail', (e) => {
+    $('.modal-title').html($(e.target).closest('.blog-card-wrapper').find('.blog-title p').html());
+    $('.modal-body').html($(e.target).closest('.blog-card-wrapper').find('.blog-detail').html());
   });
 };
 
 module.exports = {
   getBlogsEvent,
-  displayBlogDetailEvent,
+  printBlogDetailToModal,
 };

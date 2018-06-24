@@ -25,16 +25,6 @@ p {
     padding: 1em 0;
 }
 
-.btn {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 1em 2em;
-    border: 1px solid #666;
-    margin: 0.5em 0;
-}
-
 .hide {
     display: none;
 }
@@ -258,6 +248,45 @@ p {
     margin: auto;
 }
 
+/* blog modal */
+
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.modal-content {
+    height: 100%;
+    min-height: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.modal-title {
+    float: left;
+    font-size: 2.5em;
+}
+
+.modal-body {
+    height: 75%;
+    font-size: 1.5em;
+    overflow: scroll;
+    text-indent: 4em;
+    text-align: left;
+    text-justify: newspaper;
+}
+
+/* .modal-header .close.modal-close-btn {
+    margin-top: 0;
+} */
+
+.modal-content {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../imgs/blogging-business-coding-34580.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /* ------------------- Footer ------------------- */
 

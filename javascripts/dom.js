@@ -1,3 +1,5 @@
+const moment = require('../lib/node_modules/moment');
+
 // dynamically generate rondom blogs from database
 const generateRondomNumbers = (blogArrayLength,numbersNeeded) => {
   const arr = [];
@@ -11,19 +13,19 @@ const generateRondomNumbers = (blogArrayLength,numbersNeeded) => {
 
 const printBlogs = (blogData,blogsNeeded) => {
   const randomNumber = generateRondomNumbers(blogData.length,blogsNeeded);
-
+  console.log(blogData);
   let domString = '';
   for (let i = 0; i < blogsNeeded; i++) {
     domString += `<div class="blog-card-wrapper" data-firebase-id='${blogData[randomNumber[i]].id}'>`;
     domString +=  `<div class="blog-card">`;
     domString +=    `<div class="blog-date">`;
-    domString +=      `<span class="blog-date-day">23</span>`;
-    domString +=      `<span class="blog-date-month">April</span>`;
+    domString +=      `<span class="blog-date-day">${moment(blogData[randomNumber[i]].date).format('DD')}</span>`;
+    domString +=      `<span class="blog-date-month">${moment(blogData[randomNumber[i]].date).format('MMM')}</span>`;
     domString +=    `</div>`;
     domString +=    `<div class="blog-title">`;
     domString +=      `<p>${blogData[randomNumber[i]].title}</p>`;
     domString +=    `</div>`;
-    domString +=    `<div class="blog-read-detail">`;
+    domString +=    `<div class="blog-read-detail" data-toggle="modal" data-target="#blog-modal">`;
     domString +=      `<p>Read Details</p>`;
     domString +=      `<img src="./imgs/if_ic_keyboard_arrow_down_48px_352466.png">`;
     domString +=    `</div>`;
