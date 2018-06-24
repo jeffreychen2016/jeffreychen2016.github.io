@@ -1,5 +1,3 @@
-const auth = require('./auth');
-
 let firebaseConfig = {};
 
 const getFirebseConfig = () => {
@@ -8,7 +6,6 @@ const getFirebseConfig = () => {
       .done((config) => {
         // initialize firebase
         firebase.initializeApp(config.apiKeys.firebaseDB);
-        auth.checkLoginStatus();
         firebaseConfig = config;
         resolve(config);
       })
