@@ -35,6 +35,9 @@ p {
     margin: 0.5em 0;
 }
 
+.hide {
+    display: none;
+}
 
 /* ------------------- Header Showcase ------------------- */
 
@@ -51,7 +54,7 @@ p {
     text-align: center;
 }
 
-#showcase .bg-image {
+#showcase #showcase-bg-image {
     position: absolute;
     background-color: #333;
     background-image: url('../imgs/black-and-white-blur-gray-34088.jpg');
@@ -155,8 +158,12 @@ p {
     width: 100%;
 }
 
-/* ------------------- Section - a -blog  ------------------- */
+/* ------------------- Section - a - Blog  ------------------- */
 .blogs-wrappper {
+    border: black 2px solid;
+}
+
+#section-a {
     border: black 2px solid;
 }
 
@@ -169,6 +176,8 @@ p {
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    border-radius: 4px;
+    box-shadow: #333;
 }
 
 .blog-date,
@@ -193,6 +202,7 @@ p {
     margin: -5px auto 5px auto;
     border: 2px solid red;
     background-color: white;
+    z-index: 2;
 }
 
 .blog-date,

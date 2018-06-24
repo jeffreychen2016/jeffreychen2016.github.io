@@ -28,7 +28,7 @@ const printBlogs = (blogData,blogsNeeded) => {
     domString +=      `<img src="./imgs/if_ic_keyboard_arrow_down_48px_352466.png">`;
     domString +=    `</div>`;
     domString +=  `</div>`;
-    domString +=  `<div class="blog-detail">${blogData[randomNumber[i]].post}</div>`;
+    domString +=  `<div class="blog-detail hide">${blogData[randomNumber[i]].post}</div>`;
     domString += `</div>`;
 
     // domString += `<p class="float-right">${blogData[i].date}</p>`;
