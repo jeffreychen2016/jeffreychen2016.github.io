@@ -10,7 +10,7 @@ const getBlogs = () => {
       .then(() => {
         firebaseAPI.getBlogsFromDB()
           .then((blogData) => {
-            dom.printBlogs(blogData);
+            dom.printBlogs(blogData,3);
           });
       })
       .catch((err) => {
