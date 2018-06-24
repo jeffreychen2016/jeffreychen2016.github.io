@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default" id="nav-bar">
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav-bar">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -46,8 +46,9 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+
     <header id="showcase" class="grid">
-        <div class="bg-image"></div>
+        <div id="showcase-bg-image"></div>
         <div class="content-wrap">
             <h1>Why Coding?</h1>
             <p>Make the world better place?</p>
@@ -60,11 +61,11 @@
 
     <main id="main">
         <section id="section-a" class="grid">
+            <div id="blog-bg-image"></div>
             <div class="content-wrap">
                 <h2 class="content-title">Blogs</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint repellendus corporis ad, dicta rerum modi,
-                    ut dolor asperiores sunt eos cum sit accusantium aperiam nostrum delectus voluptatem quis obcaecati beatae,
-                    eaque totam aliquid unde numquam facere? In unde aperiam repellendus.</p>
+                <div id="blogs-wrappper">
+                </div>
             </div>
         </section>
 
@@ -95,6 +96,24 @@
             </div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="blog-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div id="modal-bg-img"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cum! Excepturi omnis temporibus deserunt quia, molestiae reprehenderit earum quae necessitatibus natus perferendis rem iure voluptates. Nulla expedita tempore sint asperiores.
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer id="main-footer" class="grid">
         <div>Web Solution</div>

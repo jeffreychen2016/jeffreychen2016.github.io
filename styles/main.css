@@ -25,33 +25,26 @@ p {
     padding: 1em 0;
 }
 
-.btn {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 1em 2em;
-    border: 1px solid #666;
-    margin: 0.5em 0;
+.hide {
+    display: none;
 }
-
 
 /* ------------------- Header Showcase ------------------- */
 
 #nav-bar {
-    background: transparent;
     border: none;
     margin-bottom: 0px;
 }
 
 
 #showcase {
+    margin-top: 50px;
     min-height: 50vh;
     color: #fff;
     text-align: center;
 }
 
-#showcase .bg-image {
+#showcase #showcase-bg-image {
     position: absolute;
     background-color: #333;
     background-image: url('../imgs/black-and-white-blur-gray-34088.jpg');
@@ -144,16 +137,156 @@ p {
 }
 
 
-/* ------------------- Section a  ------------------- */
+/* ------------------- Sections  ------------------- */
 
 #section-a,
 #section-b {
     background: #eaeaea;
     color: #333;
     padding-bottom: 2em;
-    height: 100vh;
+    height: 80vh;
+    width: 100%;
 }
 
+/* ------------------- Section - a - Blog  ------------------- */
+.blogs-wrappper {
+    border: black 2px solid;
+}
+
+#section-a {
+    border: black 2px solid;
+}
+
+.blog-card {
+    width:80%;
+    border: black 2px solid;
+    margin: 5px auto;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: #333;
+}
+
+.blog-date,
+.blog-read-detail {
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s;
+}
+
+.blog-title {
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    left: 35%;
+    display: table;
+    transition: transform 1s;
+}
+
+.blog-detail {
+    width: 80%;
+    margin: -5px auto 5px auto;
+    border: 2px solid red;
+    background-color: white;
+    z-index: 2;
+}
+
+.blog-date,
+.blog-read-detail {
+    background-color: rgb(255, 196, 0);
+}
+
+.blog-read-detail {
+    left: 100%;
+    font-size: 1.5em;
+}
+
+.blog-read-detail p {
+    padding-bottom: 0px;
+}
+
+.blog-card:hover .blog-date,
+.blog-card:hover .blog-read-detail {
+    transform: translateX(-100%);
+}
+
+.blog-card:hover .blog-title {
+    /* 35% / 65% */
+    transform: translateX(-53.846154%);
+}
+
+.blog-date-day,
+.blog-date-month {
+    display: block;
+    width: 100%;
+}
+
+.blog-date-day {
+    font-size: 3em;
+    margin-top: 5px;
+}
+
+.blog-date-month {
+    font-size: 1.5em;
+    margin-top: -10px;
+}
+
+.blog-title p {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2em;
+    padding: 0;
+}
+
+.blog-read-detail img {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+/* blog modal */
+
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.modal-content {
+    height: 100%;
+    min-height: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.modal-title {
+    float: left;
+    font-size: 2.5em;
+}
+
+.modal-body {
+    height: 75%;
+    font-size: 1.5em;
+    overflow: scroll;
+    text-indent: 4em;
+    text-align: left;
+    text-justify: newspaper;
+}
+
+/* .modal-header .close.modal-close-btn {
+    margin-top: 0;
+} */
+
+.modal-content {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../imgs/blogging-business-coding-34580.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /* ------------------- Footer ------------------- */
 

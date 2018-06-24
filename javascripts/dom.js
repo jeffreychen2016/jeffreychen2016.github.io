@@ -1,21 +1,41 @@
-const auth = require('./auth');
+const moment = require('../lib/node_modules/moment');
 
-const printBlogs = (blogData) => {
+// dynamically generate rondom blogs from database
+const generateRondomNumbers = (blogArrayLength,numbersNeeded) => {
+  const arr = [];
+  while (arr.length < numbersNeeded) {
+    const randomnumber = Math.floor(Math.random() * blogArrayLength);
+    if (arr.indexOf(randomnumber) > -1) continue;
+    arr[arr.length] = randomnumber;
+  };
+  return arr;
+};
+
+const printBlogs = (blogData,blogsNeeded) => {
+  const randomNumber = generateRondomNumbers(blogData.length,blogsNeeded);
+  console.log(blogData);
   let domString = '';
-  for (let i = 0; i < blogData.length; i++) {
-    domString += `<div data-firebase-id='${blogData[i].id}' class='blog-card'>`;
-    domString +=  `<h2 class="float-left">${blogData[i].title}</h2>`;
-    // domString += `<p class="float-right">${blogData[i].date}</p>`;
-    domString +=  `<div class="btn-group btn-group-blog float-right" role="group" aria-label="...">`;
+  for (let i = 0; i < blogsNeeded; i++) {
+    domString += `<div class="blog-card-wrapper" data-firebase-id='${blogData[randomNumber[i]].id}'>`;
+    domString +=  `<div class="blog-card">`;
+    domString +=    `<div class="blog-date">`;
+    domString +=      `<span class="blog-date-day">${moment(blogData[randomNumber[i]].date).format('DD')}</span>`;
+    domString +=      `<span class="blog-date-month">${moment(blogData[randomNumber[i]].date).format('MMM')}</span>`;
+    domString +=    `</div>`;
+    domString +=    `<div class="blog-title">`;
+    domString +=      `<p>${blogData[randomNumber[i]].title}</p>`;
+    domString +=    `</div>`;
+    domString +=    `<div class="blog-read-detail" data-toggle="modal" data-target="#blog-modal">`;
+    domString +=      `<p>Read Details</p>`;
+    domString +=      `<img src="./imgs/if_ic_keyboard_arrow_down_48px_352466.png">`;
+    domString +=    `</div>`;
     domString +=  `</div>`;
-    domString +=  `<p class="clear-float">${blogData[i].post}</p>`;
+    domString +=  `<div class="blog-detail hide">${blogData[randomNumber[i]].post}</div>`;
     domString += `</div>`;
-  }
-  $('#blog-container').html(domString);
 
-  // check if admin is log in
-  // if log in then display buttons
-  auth.checkLoginStatus();
+    // domString += `<p class="float-right">${blogData[i].date}</p>`;
+  }
+  $('#blogs-wrappper').html(domString);
 };
 
 const printProjects = (projectData) => {
