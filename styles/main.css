@@ -168,7 +168,7 @@ p {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .blog-date,
@@ -179,11 +179,6 @@ p {
     transition: transform 1s;
 }
 
-.blog-date,
-.blog-read-detail {
-    background-color: rgb(255, 196, 0);
-}
-
 .blog-title {
     width: 65%;
     height: 100%;
@@ -191,6 +186,18 @@ p {
     left: 35%;
     display: table;
     transition: transform 1s;
+}
+
+.blog-detail {
+    width: 80%;
+    margin: -5px auto 5px auto;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.blog-date,
+.blog-read-detail {
+    background-color: rgb(255, 196, 0);
 }
 
 .blog-read-detail {
