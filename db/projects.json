@@ -1,0 +1,34 @@
+{
+  "projects" : [
+    {
+      "projectId": 1,
+      "title": "Local Weather",
+      "thumbnail": "./imgs/Screen Shot 2018-06-24 at 7.59.12 PM.png",
+      "description": "This app is designed to view local weather for current day, next 3 days, and next 5 days...",
+      "technologiesUsed": "jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://XXX.firebaseapp.com",
+      "github": "https://github.com/XXX"
+    },
+    {
+      "projectId": 2,
+      "title": "Local Weather",
+      "thumbnail": "./imgs/Screen Shot 2018-06-24 at 7.59.12 PM.png",
+      "description": "This app is designed to view local weather for current day, next 3 days, and next 5 days...",
+      "technologiesUsed": "jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://XXX.firebaseapp.com",
+      "github": "https://github.com/XXX"
+    },
+    {
+      "projectId": 3,
+      "title": "Local Weather",
+      "thumbnail": "./imgs/Screen Shot 2018-06-24 at 7.59.12 PM.png",
+      "description": "This app is designed to view local weather for current day, next 3 days, and next 5 days...",
+      "technologiesUsed": "jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://XXX.firebaseapp.com",
+      "github": "https://github.com/XXX"
+    }
+  ]
+}
