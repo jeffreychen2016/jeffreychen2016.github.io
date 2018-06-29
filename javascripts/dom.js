@@ -1,10 +1,10 @@
 const moment = require('../lib/node_modules/moment');
 
 // dynamically generate rondom blogs from database
-const generateRondomNumbers = (blogArrayLength,numbersNeeded) => {
+const generateRondomNumbers = (ArrayLength,numbersNeeded) => {
   const arr = [];
   while (arr.length < numbersNeeded) {
-    const randomnumber = Math.floor(Math.random() * blogArrayLength);
+    const randomnumber = Math.floor(Math.random() * ArrayLength);
     if (arr.indexOf(randomnumber) > -1) continue;
     arr[arr.length] = randomnumber;
   };
@@ -13,7 +13,6 @@ const generateRondomNumbers = (blogArrayLength,numbersNeeded) => {
 
 const printBlogs = (blogData,blogsNeeded) => {
   const randomNumber = generateRondomNumbers(blogData.length,blogsNeeded);
-  console.log(blogData);
   let domString = '';
   for (let i = 0; i < blogsNeeded; i++) {
     domString += `<div class="blog-card-wrapper" data-firebase-id='${blogData[randomNumber[i]].id}'>`;
@@ -32,23 +31,37 @@ const printBlogs = (blogData,blogsNeeded) => {
     domString +=  `</div>`;
     domString +=  `<div class="blog-detail hide">${blogData[randomNumber[i]].post}</div>`;
     domString += `</div>`;
-
-    // domString += `<p class="float-right">${blogData[i].date}</p>`;
   }
   $('#blogs-wrappper').html(domString);
 };
 
 const printProjects = (projectData) => {
+  console.log(projectData.length);
   let domString = '';
-  for (let i = 0; i < projectData.projects.length; i++) {
-    domString += `<div>`;
-    domString += `<h2>${projectData.projects[i].title}</h2>`;
-    domString += `<img src ="${projectData.projects[i].imageUrl}">`;
-    domString += `<p>${projectData.projects[i].description}</p>`;
-    domString += `<p>${projectData.projects[i].githubUrl}</p>`;
+  for (let i = 0; i < projectData.length; i++) {
+    domString += `<div class="project-card col-sm-6 col-md-4">`;
+    domString +=  `<div class="thumbnail">`;
+    domString +=    `<div class="project-links">`;
+    domString +=      `<h3>${projectData[i].title}</h3>`;
+    domString +=      `<div class="project-links-group">`;
+    domString +=        `<a href="${projectData[i].github}" target="_blank">`;
+    domString +=          `<img class='github-icon' src="./imgs/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad15af349.5031683815215479853725.png" alt="">`;
+    domString +=        `</a>`;
+    domString +=        `<a href="${projectData[i].url}" target="_blank">`;
+    domString +=          `<img class='browser-icon' src="./imgs/5a3a256a0f8285.78345796151376010606357039.png" alt="">`;
+    domString +=        `</a>`;
+    domString +=        `<div class='project-description'>`;
+    domString +=        `</div>`;
+    domString +=      `</div>`;
+    domString +=    `</div>`;
+    domString +=    `<div class="project-img-wrapper">`;
+    domString +=      `<img src="./imgs/Screen Shot 2018-06-24 at 7.59.12 PM.png" alt="">`;
+    domString +=    `</div>`;
+    domString +=  `</div>`;
     domString += `</div>`;
-  }
-  $('#project-container').html(domString);
+  };
+
+  $('#project-row').append(domString);
 };
 
 module.exports = {
