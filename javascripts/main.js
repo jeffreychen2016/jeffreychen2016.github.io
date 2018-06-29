@@ -1,7 +1,7 @@
 const events = require('./events');
 
 const initializeApp = () => {
-  events.getBlogsEvent();
+  events.getAllDataOnPageLoad();
   events.printBlogDetailToModal();
 };
 

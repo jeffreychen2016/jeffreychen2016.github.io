@@ -7,27 +7,13 @@ const dom = require('./dom');
 // Check to see if firebase has been initiallized,
 // if not, initiallize it before call the get function
 const getBlogsEvent = () => {
-  if (!firebase.apps.length) {
-    firebaseAPI.getFirebseConfig()
-      .then(() => {
-        firebaseAPI.getBlogsFromDB()
-          .then((blogData) => {
-            dom.printBlogs(blogData,4);
-          });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  } else {
-    firebaseAPI.getBlogsFromDB()
-      .then((blogData) => {
-        dom.printBlogs(blogData,4);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-    console.log('No firebase app has been initialized!');
-  };
+  firebaseAPI.getBlogsFromDB()
+    .then((blogData) => {
+      dom.printBlogs(blogData,4);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 };
 
 const printBlogDetailToModal = () => {
@@ -37,7 +23,34 @@ const printBlogDetailToModal = () => {
   });
 };
 
+// GET
+// Get project data from database and display on the page
+// Check to see if firebase has been initiallized,
+// if not, initiallize it before call the get function
+const getProjectsEvent = () => {
+  firebaseAPI.getProjectsFromDB()
+    .then((projectData) => {
+      dom.printProjects(projectData,4);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+
+const getAllDataOnPageLoad = () => {
+  if (!firebase.apps.length) {
+    firebaseAPI.getFirebseConfig()
+      .then(() => {
+        getBlogsEvent();
+        getProjectsEvent();
+      })
+      .catch((err) => {
+        console.error('Firebase has not been initiallized:',err);
+      });
+  };
+};
+
 module.exports = {
-  getBlogsEvent,
+  getAllDataOnPageLoad,
   printBlogDetailToModal,
 };
