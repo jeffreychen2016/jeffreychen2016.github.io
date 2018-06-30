@@ -45,10 +45,10 @@ const printProjects = (projectData) => {
     domString +=      `<h3>${projectData[i].title}</h3>`;
     domString +=      `<div class="project-links-group">`;
     domString +=        `<a href="${projectData[i].github}" target="_blank">`;
-    domString +=          `<img class='github-icon' src="./imgs/kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad15af349.5031683815215479853725.png" alt="">`;
+    domString +=          `<img class='github-icon' src="./imgs/if_online_social_media_chrome_734391.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<a href="${projectData[i].url}" target="_blank">`;
-    domString +=          `<img class='browser-icon' src="./imgs/5a3a256a0f8285.78345796151376010606357039.png" alt="">`;
+    domString +=          `<img class='browser-icon' src="./imgs/if_social_media_logo_github_1221585.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<div class='project-description'>`;
     domString +=        `</div>`;
