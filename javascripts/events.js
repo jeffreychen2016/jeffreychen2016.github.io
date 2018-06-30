@@ -55,12 +55,13 @@ const moveToSection = () => {
     let offset = '';
     if (e.target.id === 'project-page-link') {
       offset = $('#section-a').offset();
+      const scrollto = offset.top - 49; // minus fixed header height
+      $('html, body').animate({ scrollTop: scrollto, }, 700);
     } else if (e.target.id === 'blog-page-link') {
       offset = $('#section-b').offset();
+      const scrollto = offset.top - 49; // minus fixed header height
+      $('html, body').animate({ scrollTop: scrollto, }, 700);
     };
-
-    const scrollto = offset.top - 49; // minus fixed header height
-    $('html, body').animate({ scrollTop: scrollto, }, 700);
   });
 };
 
