@@ -50,7 +50,22 @@ const getAllDataOnPageLoad = () => {
   };
 };
 
+const moveToSection = () => {
+  $(document).on('click', (e) => {
+    let offset = '';
+    if (e.target.id === 'project-page-link') {
+      offset = $('#section-a').offset();
+    } else if (e.target.id === 'blog-page-link') {
+      offset = $('#section-b').offset();
+    };
+
+    const scrollto = offset.top - 49; // minus fixed header height
+    $('html, body').animate({ scrollTop: scrollto, }, 700);
+  });
+};
+
 module.exports = {
   getAllDataOnPageLoad,
   printBlogDetailToModal,
+  moveToSection,
 };

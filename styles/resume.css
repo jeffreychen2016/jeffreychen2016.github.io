@@ -1,0 +1,110 @@
+/*------------------------------ Generic ------------------------------*/
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  font-family: arial, Verdana, sans-serif;
+  color: #cfcfcf;
+  /* background-color:rgb(233, 224, 224); */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../imgs/background.jpg');
+  background-size: cover;
+}
+
+main{
+  min-height: 100%;
+}
+
+/*------------------------------ Resume Page ------------------------------*/
+
+#resume-container .resume-section ul{
+  list-style: none;
+  padding: 0;
+}
+
+#resume-container h1,
+#resume-container h2,
+#resume-container .resume-personal-info ul{
+  text-align: center;
+}
+
+.resume-section{
+  border:2px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.resume-section ul{
+  list-style-position: inside;
+  padding: 0;
+}
+
+.resume-job-title{
+  margin-left: 8px;
+}
+
+.resume-date,
+.resume-section ul{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#resume-container .education p{
+  margin-left:8px;
+}
+
+/*------------------------------ Media Queries ------------------------------*/
+
+@media(min-width : 900px){
+
+  /*------------------------------ Resume Page ------------------------------*/
+  #resume-container{
+      max-width: 1000px;
+      margin: auto;
+
+  }
+  #resume-container .section-title{
+      text-transform: uppercase;
+  }
+
+  #resume-container .resume-section h1{
+      margin: 0;
+      border-radius: 6px 6px 0 0;
+      text-align: center;
+      padding: 5px;
+      margin-bottom: 0px;
+  }
+
+  #resume-container #personal-info{
+      text-align: center;
+      margin: 0;
+  }
+
+  #resume-container #personal-info li{
+      display: inline-block;
+      margin: 0px 40px 20px 40px;
+  }
+
+  #resume-container li{
+      margin-bottom: 5px;
+  }
+
+  #resume-container .float-left{
+      float: left;
+  }
+
+  #resume-container .float-right{
+      float: right;
+  }
+
+  #resume-container .float-clear{
+      clear:both;
+  }
+}
+
+
