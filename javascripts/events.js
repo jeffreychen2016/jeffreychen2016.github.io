@@ -74,8 +74,15 @@ const moveToSection = () => {
   });
 };
 
+const getDifferentBlogs = () => {
+  $(document).on('click','#more-blog-btn', () => {
+    getBlogsEvent();
+  });
+};
+
 module.exports = {
   getAllDataOnPageLoad,
   printBlogDetailToModal,
   moveToSection,
+  getDifferentBlogs,
 };
