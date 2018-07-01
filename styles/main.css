@@ -137,11 +137,11 @@ p {
     }
 }
 
-
 /* ------------------- Sections  ------------------- */
 
 #section-a,
-#section-b {
+#section-b,
+#section-c {
     position: static;
     background: #eaeaea;
     color: #fff;
@@ -353,7 +353,26 @@ a.browser-icon {
     bottom: 10px;
 }
 
+/* ------------------- Skills ------------------- */
+#section-c {
+    position: relative;
+    color: #333;
+}
 
+#skills-wrappper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+}
+
+.skill-icon {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+}
 
 
 /* ------------------- Footer ------------------- */

@@ -52,6 +52,7 @@ const getAllDataOnPageLoad = () => {
 
 const moveToSection = () => {
   $(document).on('click', (e) => {
+    console.log(e.target.id);
     let offset = '';
     if (e.target.id === 'project-page-link') {
       offset = $('#section-a').offset();
@@ -59,6 +60,14 @@ const moveToSection = () => {
       $('html, body').animate({ scrollTop: scrollto, }, 700);
     } else if (e.target.id === 'blog-page-link') {
       offset = $('#section-b').offset();
+      const scrollto = offset.top - 49; // minus fixed header height
+      $('html, body').animate({ scrollTop: scrollto, }, 700);
+    } else if (e.target.id === 'skill-page-link') {
+      offset = $('#section-c').offset();
+      const scrollto = offset.top - 49; // minus fixed header height
+      $('html, body').animate({ scrollTop: scrollto, }, 700);
+    } else if (e.target.id === 'contact-page-link') {
+      offset = $('#main-footer').offset();
       const scrollto = offset.top - 49; // minus fixed header height
       $('html, body').animate({ scrollTop: scrollto, }, 700);
     };
