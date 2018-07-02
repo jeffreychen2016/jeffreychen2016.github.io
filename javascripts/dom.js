@@ -50,11 +50,12 @@ const printProjects = (projectData) => {
     domString +=          `<img class='browser-icon' src="./imgs/chrome-project.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<div class='project-description'>`;
+    domString +=          `<p>${projectData[i].description}</p>`;
     domString +=        `</div>`;
     domString +=      `</div>`;
     domString +=    `</div>`;
     domString +=    `<div class="project-img-wrapper">`;
-    domString +=      `<img src="./imgs/Screen Shot 2018-06-24 at 7.59.12 PM.png" alt="">`;
+    domString +=      `<img src="./imgs/local-weather" alt="">`;
     domString +=    `</div>`;
     domString +=  `</div>`;
     domString += `</div>`;
