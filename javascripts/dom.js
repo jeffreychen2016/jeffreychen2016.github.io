@@ -55,7 +55,7 @@ const printProjects = (projectData) => {
     domString +=      `</div>`;
     domString +=    `</div>`;
     domString +=    `<div class="project-img-wrapper">`;
-    domString +=      `<img src="./imgs/local-weather" alt="">`;
+    domString +=      `<img src="${projectData[i].thumbnail}" alt="">`;
     domString +=    `</div>`;
     domString +=  `</div>`;
     domString += `</div>`;
