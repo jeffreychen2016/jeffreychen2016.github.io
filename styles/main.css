@@ -154,6 +154,12 @@ p {
     width: 100%;
 }
 
+.content-title,
+#showcase h1 {
+    font-weight: 700;
+}
+
+
 /* ------------------- Section - a - Blog  ------------------- */
 
 #section-b .content-title {
@@ -414,6 +420,7 @@ a.browser-icon {
     background: #000000;
     color: #fff;
     text-align: center;
+    padding-top: 0;
 }
 
 #main-footer a {
@@ -425,6 +432,16 @@ a.browser-icon {
     font-size: 2em;
     padding: 1% 5%;
     text-align: center;
+}
+
+#my-email span {
+    top: 5px;
+    left: -5px;
+}
+
+#my-number span {
+    top: 3px;
+    left: -5px;
 }
 
 #my-number {
