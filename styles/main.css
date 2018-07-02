@@ -37,6 +37,10 @@ p {
     font-size: 1.5em;
 }
 
+#nav-bar a {
+    cursor: pointer;
+}
+
 
 #showcase {
     margin-top: 50px;
@@ -48,7 +52,7 @@ p {
 #showcase #showcase-bg-image {
     position: absolute;
     background-color: #333;
-    background-image: url('../imgs/black-and-white-blur-gray-34088.jpg');
+    background-image: url('../imgs/showcase.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -160,7 +164,7 @@ p {
 #blog-bg-image {
     position: absolute;
     background-color: #333;
-    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/close-up-code-coding-160107.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/blog-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -213,6 +217,7 @@ p {
 
 .blog-read-detail {
     border-left: 2px solid black;
+    cursor: pointer;
 }
 
 .blog-read-detail {
@@ -278,6 +283,8 @@ p {
     color: #fff;
     font-size: 1.5em;
     border: #000000 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #more-blog-btn:hover {
@@ -314,7 +321,7 @@ p {
 }
 
 .modal-content {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../imgs/blogging-business-coding-34580.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../imgs/modal-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

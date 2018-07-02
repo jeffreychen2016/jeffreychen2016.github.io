@@ -26,7 +26,7 @@ const printBlogs = (blogData,blogsNeeded) => {
     domString +=    `</div>`;
     domString +=    `<div class="blog-read-detail" data-toggle="modal" data-target="#blog-modal">`;
     domString +=      `<p>Read Details</p>`;
-    domString +=      `<img src="./imgs/if_ic_keyboard_arrow_down_48px_352466.png">`;
+    domString +=      `<img src="./imgs/arrow-down.png">`;
     domString +=    `</div>`;
     domString +=  `</div>`;
     domString +=  `<div class="blog-detail hide">${blogData[randomNumber[i]].post}</div>`;
@@ -36,7 +36,6 @@ const printBlogs = (blogData,blogsNeeded) => {
 };
 
 const printProjects = (projectData) => {
-  console.log(projectData.length);
   let domString = '';
   for (let i = 0; i < projectData.length; i++) {
     domString += `<div class="project-card col-sm-6 col-md-4">`;
@@ -45,10 +44,10 @@ const printProjects = (projectData) => {
     domString +=      `<h3>${projectData[i].title}</h3>`;
     domString +=      `<div class="project-links-group">`;
     domString +=        `<a href="${projectData[i].github}" target="_blank">`;
-    domString +=          `<img class='github-icon' src="./imgs/if_online_social_media_chrome_734391.png" alt="">`;
+    domString +=          `<img class='github-icon' src="./imgs/github-project.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<a href="${projectData[i].url}" target="_blank">`;
-    domString +=          `<img class='browser-icon' src="./imgs/if_social_media_logo_github_1221585.png" alt="">`;
+    domString +=          `<img class='browser-icon' src="./imgs/chrome-project.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<div class='project-description'>`;
     domString +=        `</div>`;
