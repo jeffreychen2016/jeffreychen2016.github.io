@@ -52,7 +52,6 @@ const getAllDataOnPageLoad = () => {
 
 const moveToSection = () => {
   $(document).on('click', (e) => {
-    console.log(e.target.id);
     let offset = '';
     if (e.target.id === 'project-page-link') {
       offset = $('#section-a').offset();
@@ -80,9 +79,17 @@ const getDifferentBlogs = () => {
   });
 };
 
+const blogOnTapEvent = () => {
+  $(document).on('click','.blog-title', (e) => {
+    $('.modal-title').html($(e.target).closest('.blog-card-wrapper').find('.blog-title p').html());
+    $('.modal-body').html($(e.target).closest('.blog-card-wrapper').find('.blog-detail').html());
+  });
+};
+
 module.exports = {
   getAllDataOnPageLoad,
   printBlogDetailToModal,
   moveToSection,
   getDifferentBlogs,
+  blogOnTapEvent,
 };

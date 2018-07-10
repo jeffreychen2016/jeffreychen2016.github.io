@@ -333,6 +333,12 @@ p {
     background-position: center;
 }
 
+.modal-close-btn {
+    opacity: 1;
+    color: #fff;
+    font-size: 4em;
+}
+
 /* ------------------- Section - b - Project  ------------------- */
 .section-title-project {
     color: #333;
