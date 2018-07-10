@@ -21,7 +21,7 @@ const printBlogs = (blogData,blogsNeeded) => {
     domString +=      `<span class="blog-date-day">${moment(blogData[randomNumber[i]].date).format('DD')}</span>`;
     domString +=      `<span class="blog-date-month">${moment(blogData[randomNumber[i]].date).format('MMM')}</span>`;
     domString +=    `</div>`;
-    domString +=    `<div class="blog-title">`;
+    domString +=    `<div class="blog-title" data-toggle="modal" data-target="#blog-modal">`;
     domString +=      `<p>${blogData[randomNumber[i]].title}</p>`;
     domString +=    `</div>`;
     domString +=    `<div class="blog-read-detail" data-toggle="modal" data-target="#blog-modal">`;

@@ -5,6 +5,7 @@ const initializeApp = () => {
   events.printBlogDetailToModal();
   events.moveToSection();
   events.getDifferentBlogs();
+  events.blogOnTapEvent();
 };
 
 initializeApp();
