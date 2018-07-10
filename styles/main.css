@@ -74,13 +74,13 @@ p {
 }
 
 #showcase p:nth-child(2) {
-    width: 12.86em;
+    width: 301px;
     animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
     animation-fill-mode: forwards;
 }
 
 #showcase p:nth-child(3) {
-    width: 14.15em;
+    width: 308px;
     opacity: 0;
     animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
     animation-delay: 2s;
@@ -88,7 +88,7 @@ p {
 }
 
 #showcase p:nth-child(4) {
-    width: 11.89em;
+    width: 326px;
     opacity: 0;
     animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
     animation-delay: 4s;
@@ -96,7 +96,7 @@ p {
 }
 
 #showcase p:nth-child(5) {
-    width: 11.43em;
+    width: 290px;
     opacity: 0;
     animation: type-endline 2s steps(40, end), blink .5s step-end infinite alternate;
     animation-delay: 6s;
