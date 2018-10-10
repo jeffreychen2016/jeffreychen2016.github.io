@@ -69,6 +69,10 @@ const moveToSection = () => {
       offset = $('#main-footer').offset();
       const scrollto = offset.top - 49; // minus fixed header height
       $('html, body').animate({ scrollTop: scrollto, }, 700);
+    } else if (e.target.id === 'home-page-link') {
+      offset = $('body').offset();
+      const scrollto = offset.top - 49; // minus fixed header height
+      $('html, body').animate({ scrollTop: scrollto, }, 700);
     };
   });
 };
