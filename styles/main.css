@@ -318,6 +318,7 @@ p {
     text-indent: 4em;
     text-align: left;
     text-justify: newspaper;
+    overflow: hidden!important;
 }
 
 .modal-content {
@@ -504,5 +505,22 @@ a.browser-icon {
         animation: type-endline 2s steps(40, end), blink .5s step-end infinite alternate;
         animation-delay: 6s;
         animation-fill-mode: forwards;
-    }    
+    }  
+    
+    #section-a,
+    #section-b,
+    #section-c,
+    #blog-bg-image {
+        height: 100vh;
+    }
+
+    /* ---------- Project ---------- */
+    .project-description p {
+        font-size: 1em;
+    }
+
+    /* ---------- Blog ---------- */
+    .blog-card p {
+        font-size: 1em;
+    }
 } 
