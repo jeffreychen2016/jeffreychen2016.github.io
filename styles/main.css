@@ -64,7 +64,7 @@ p {
 }
 
 #showcase p {
-    border-right: 1px solid  black;
+    border-right: 1px solid  white;
     white-space: nowrap;
     overflow: hidden;
     font-size: 2em;
@@ -468,8 +468,8 @@ a.browser-icon {
         font-size: 9em;
     }
 
-    .content-wrap p {
-        font-size: 10em;
+    #showcase .content-wrap p {
+        font-size: 3em;
     }
 
     #showcase,
@@ -478,13 +478,13 @@ a.browser-icon {
     }
 
     #showcase p:nth-child(2) {
-        width: 307px;
+        width: 458px;
         animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
         animation-fill-mode: forwards;
     }
     
     #showcase p:nth-child(3) {
-        width: 310px;
+        width: 467px;
         opacity: 0;
         animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
         animation-delay: 2s;
@@ -492,7 +492,7 @@ a.browser-icon {
     }
     
     #showcase p:nth-child(4) {
-        width: 334px;
+        width: 501px;
         opacity: 0;
         animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
         animation-delay: 4s;
@@ -500,7 +500,7 @@ a.browser-icon {
     }
     
     #showcase p:nth-child(5) {
-        width: 292px;
+        width: 439px;
         opacity: 0;
         animation: type-endline 2s steps(40, end), blink .5s step-end infinite alternate;
         animation-delay: 6s;
