@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "moment": "^2.22.2",
-    "nom": "0.0.3"
+    "nom": "0.0.3",
+    "paginationjs": "^2.1.4"
   }
 }

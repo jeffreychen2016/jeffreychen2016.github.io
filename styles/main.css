@@ -160,6 +160,7 @@ p {
     font-weight: 700;
 }
 
+/* ------------------- pagination  ------------------- */
 
 /* ------------------- Section - a - Blog  ------------------- */
 
@@ -511,7 +512,7 @@ a.browser-icon {
     #section-b,
     #section-c,
     #blog-bg-image {
-        height: 100vh;
+        height: 95vh;
     }
 
     /* ---------- Project ---------- */
