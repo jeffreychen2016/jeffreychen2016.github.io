@@ -73,6 +73,10 @@ const moveToSection = () => {
       offset = $('body').offset();
       const scrollto = offset.top - 49; // minus fixed header height
       $('html, body').animate({ scrollTop: scrollto, }, 700);
+    } else if (e.target.classList.contains('pagination-page-link')) {
+      offset = $('#section-a').offset();
+      const scrollto = offset.top - 49; // minus fixed header height
+      $('html, body').animate({ scrollTop: scrollto, }, 700);
     };
   });
 };
@@ -96,6 +100,7 @@ const projectPaginationEvent = () => {
     firebaseAPI.getProjectsFromDB()
       .then((projectData) => {
         dom.printProjects(projectData,page);
+        moveToSection();
       })
       .catch((err) => {
         console.error(err);

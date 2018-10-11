@@ -17,16 +17,16 @@ const printProjectPaginationController = (projectData) => {
   domString += '<nav aria-label="Page navigation example" class="pagination-container">';
   domString +=   '<ul class="pagination">';
   domString +=     '<li class="page-item">';
-  domString +=       '<a class="page-link" href="#" aria-label="Previous">';
+  domString +=       '<a class="page-link pagination-page-link" href="#" aria-label="Previous">';
   domString +=         '<span aria-hidden="true">&laquo;</span>';
   domString +=         '<span class="sr-only">Previous</span>';
   domString +=       '</a>';
   domString +=     '</li>';
   for (let i = 0; i < numberOfPageNeeded; i++) {
-    domString +=     `<li class="page-item"><a class="page-link">${i + 1}</a></li>`;
+    domString +=     `<li class="page-item"><a class="page-link pagination-page-link">${i + 1}</a></li>`;
   };
   domString +=       '<li class="page-item">';
-  domString +=         '<a class="page-link" href="#" aria-label="Next">';
+  domString +=         '<a class="page-link pagination-page-link" href="#" aria-label="Next">';
   domString +=           '<span aria-hidden="true">&raquo;</span>';
   domString +=           '<span class="sr-only">Next</span>';
   domString +=         '</a>';
