@@ -94,13 +94,21 @@ const blogOnTapEvent = () => {
   });
 };
 
+const selectCurrentPageEvent = () => {
+  $(document).on('click','.page-item', (e) => {
+    $('.page-selected').removeClass('page-selected');
+    $(e.target).addClass('page-selected');
+  });
+};
+
 const projectPaginationEvent = () => {
   $(document).on('click','.page-item', (e) => {
     const page = $(e.target).text() * 1;
     firebaseAPI.getProjectsFromDB()
       .then((projectData) => {
-        dom.printProjects(projectData,page);
         moveToSection();
+        selectCurrentPageEvent();
+        dom.printProjects(projectData,page);
       })
       .catch((err) => {
         console.error(err);
@@ -115,4 +123,5 @@ module.exports = {
   getDifferentBlogs,
   blogOnTapEvent,
   projectPaginationEvent,
+  selectCurrentPageEvent,
 };
