@@ -33,7 +33,7 @@ const printProjectPaginationController = (projectData) => {
   domString +=     '</ul>';
   domString +=   '</nav>';
 
-  printProjects(projectData,0);
+  printProjects(projectData,1);
   $('#section-a').append(domString);
 };
 
@@ -63,9 +63,11 @@ const printBlogs = (blogData,blogsNeeded) => {
 };
 
 const printProjects = (projectData,page) => {
+  $('#project-row').html('');
   let domString = '';
+  const firstPorjectIndex = page - 1;
   const reversedProjectData = projectData.reverse();
-  for (let i = (page * 6); i < (page * 6 + 6); i++) {
+  for (let i = (firstPorjectIndex * 6); i < (firstPorjectIndex * 6 + 6); i++) {
     if (reversedProjectData[i] === undefined)
     {
       break;
@@ -100,4 +102,5 @@ const printProjects = (projectData,page) => {
 module.exports = {
   printBlogs,
   printProjectPaginationController,
+  printProjects,
 };

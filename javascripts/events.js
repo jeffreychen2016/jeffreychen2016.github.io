@@ -90,10 +90,24 @@ const blogOnTapEvent = () => {
   });
 };
 
+const projectPaginationEvent = () => {
+  $(document).on('click','.page-item', (e) => {
+    const page = $(e.target).text() * 1;
+    firebaseAPI.getProjectsFromDB()
+      .then((projectData) => {
+        dom.printProjects(projectData,page);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+};
+
 module.exports = {
   getAllDataOnPageLoad,
   printBlogDetailToModal,
   moveToSection,
   getDifferentBlogs,
   blogOnTapEvent,
+  projectPaginationEvent,
 };
