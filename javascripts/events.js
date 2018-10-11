@@ -30,7 +30,7 @@ const printBlogDetailToModal = () => {
 const getProjectsEvent = () => {
   firebaseAPI.getProjectsFromDB()
     .then((projectData) => {
-      dom.printProjects(projectData,4);
+      dom.printProjectPaginationController(projectData);
     })
     .catch((err) => {
       console.error(err);
