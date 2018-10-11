@@ -147,7 +147,7 @@ p {
 #section-a,
 #section-b,
 #section-c {
-    position: static;
+    position: relative;
     background: #eaeaea;
     color: #fff;
     padding-bottom: 2em;
@@ -160,6 +160,13 @@ p {
     font-weight: 700;
 }
 
+/* ------------------- pagination  ------------------- */
+.pagination-container {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%)
+}
 
 /* ------------------- Section - a - Blog  ------------------- */
 
@@ -511,7 +518,7 @@ a.browser-icon {
     #section-b,
     #section-c,
     #blog-bg-image {
-        height: 100vh;
+        height: 95vh;
     }
 
     /* ---------- Project ---------- */

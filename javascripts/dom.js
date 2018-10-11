@@ -11,6 +11,31 @@ const generateRondomNumbers = (ArrayLength,numbersNeeded) => {
   return arr;
 };
 
+const printPagination = () => {
+  let domString = '';
+  domString += '<nav aria-label="Page navigation example" class="pagination-container">';
+  domString +=   '<ul class="pagination">';
+  domString +=     '<li class="page-item">';
+  domString +=       '<a class="page-link" href="#" aria-label="Previous">';
+  domString +=         '<span aria-hidden="true">&laquo;</span>';
+  domString +=         '<span class="sr-only">Previous</span>';
+  domString +=       '</a>';
+  domString +=     '</li>';
+  domString +=     '<li class="page-item"><a class="page-link" href="#">1</a></li>';
+  domString +=     '<li class="page-item"><a class="page-link" href="#">2</a></li>';
+  domString +=     '<li class="page-item"><a class="page-link" href="#">3</a></li>';
+  domString +=       '<li class="page-item">';
+  domString +=         '<a class="page-link" href="#" aria-label="Next">';
+  domString +=           '<span aria-hidden="true">&raquo;</span>';
+  domString +=           '<span class="sr-only">Next</span>';
+  domString +=         '</a>';
+  domString +=       '</li>';
+  domString +=     '</ul>';
+  domString +=   '</nav>';
+
+  $('#section-a').append(domString);
+};
+
 const printBlogs = (blogData,blogsNeeded) => {
   const randomNumber = generateRondomNumbers(blogData.length,blogsNeeded);
   let domString = '';
@@ -32,6 +57,7 @@ const printBlogs = (blogData,blogsNeeded) => {
     domString +=  `<div class="blog-detail hide">${blogData[randomNumber[i]].post}</div>`;
     domString += `</div>`;
   }
+
   $('#blogs-wrappper').html(domString);
 };
 
@@ -60,6 +86,7 @@ const printProjects = (projectData) => {
     domString +=  `</div>`;
     domString += `</div>`;
   };
+  printPagination();
 
   $('#project-row').append(domString);
 };
