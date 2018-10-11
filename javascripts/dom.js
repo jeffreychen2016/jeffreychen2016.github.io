@@ -64,8 +64,9 @@ const printBlogs = (blogData,blogsNeeded) => {
 
 const printProjects = (projectData,page) => {
   let domString = '';
+  const reversedProjectData = projectData.reverse();
   for (let i = (page * 6); i < (page * 6 + 6); i++) {
-    if (projectData[i] === undefined)
+    if (reversedProjectData[i] === undefined)
     {
       break;
     };
@@ -73,21 +74,21 @@ const printProjects = (projectData,page) => {
     domString += `<div class="project-card col-sm-6 col-md-4">`;
     domString +=  `<div class="thumbnail">`;
     domString +=    `<div class="project-links">`;
-    domString +=      `<h3>${projectData[i].title}</h3>`;
+    domString +=      `<h3>${reversedProjectData[i].title}</h3>`;
     domString +=      `<div class="project-links-group">`;
-    domString +=        `<a href="${projectData[i].github}" target="_blank">`;
+    domString +=        `<a href="${reversedProjectData[i].github}" target="_blank">`;
     domString +=          `<img class='github-icon' src="./imgs/github-project.png" alt="">`;
     domString +=        `</a>`;
-    domString +=        `<a href="${projectData[i].url}" target="_blank">`;
+    domString +=        `<a href="${reversedProjectData[i].url}" target="_blank">`;
     domString +=          `<img class='browser-icon' src="./imgs/chrome-project.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<div class='project-description'>`;
-    domString +=          `<p>${projectData[i].description}</p>`;
+    domString +=          `<p>${reversedProjectData[i].description}</p>`;
     domString +=        `</div>`;
     domString +=      `</div>`;
     domString +=    `</div>`;
     domString +=    `<div class="project-img-wrapper">`;
-    domString +=      `<img src="${projectData[i].thumbnail}" alt="">`;
+    domString +=      `<img src="${reversedProjectData[i].thumbnail}" alt="">`;
     domString +=    `</div>`;
     domString +=  `</div>`;
     domString += `</div>`;
