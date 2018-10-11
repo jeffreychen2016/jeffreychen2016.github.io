@@ -33,7 +33,7 @@ const printProjectPaginationController = (projectData) => {
   domString +=     '</ul>';
   domString +=   '</nav>';
 
-  printProjects(projectData,0);
+  printProjects(projectData,1);
   $('#section-a').append(domString);
 };
 
@@ -63,9 +63,12 @@ const printBlogs = (blogData,blogsNeeded) => {
 };
 
 const printProjects = (projectData,page) => {
+  $('#project-row').html('');
   let domString = '';
-  for (let i = (page * 6); i < (page * 6 + 6); i++) {
-    if (projectData[i] === undefined)
+  const firstPorjectIndex = page - 1;
+  const reversedProjectData = projectData.reverse();
+  for (let i = (firstPorjectIndex * 6); i < (firstPorjectIndex * 6 + 6); i++) {
+    if (reversedProjectData[i] === undefined)
     {
       break;
     };
@@ -73,21 +76,21 @@ const printProjects = (projectData,page) => {
     domString += `<div class="project-card col-sm-6 col-md-4">`;
     domString +=  `<div class="thumbnail">`;
     domString +=    `<div class="project-links">`;
-    domString +=      `<h3>${projectData[i].title}</h3>`;
+    domString +=      `<h3>${reversedProjectData[i].title}</h3>`;
     domString +=      `<div class="project-links-group">`;
-    domString +=        `<a href="${projectData[i].github}" target="_blank">`;
+    domString +=        `<a href="${reversedProjectData[i].github}" target="_blank">`;
     domString +=          `<img class='github-icon' src="./imgs/github-project.png" alt="">`;
     domString +=        `</a>`;
-    domString +=        `<a href="${projectData[i].url}" target="_blank">`;
+    domString +=        `<a href="${reversedProjectData[i].url}" target="_blank">`;
     domString +=          `<img class='browser-icon' src="./imgs/chrome-project.png" alt="">`;
     domString +=        `</a>`;
     domString +=        `<div class='project-description'>`;
-    domString +=          `<p>${projectData[i].description}</p>`;
+    domString +=          `<p>${reversedProjectData[i].description}</p>`;
     domString +=        `</div>`;
     domString +=      `</div>`;
     domString +=    `</div>`;
     domString +=    `<div class="project-img-wrapper">`;
-    domString +=      `<img src="${projectData[i].thumbnail}" alt="">`;
+    domString +=      `<img src="${reversedProjectData[i].thumbnail}" alt="">`;
     domString +=    `</div>`;
     domString +=  `</div>`;
     domString += `</div>`;
@@ -99,4 +102,5 @@ const printProjects = (projectData,page) => {
 module.exports = {
   printBlogs,
   printProjectPaginationController,
+  printProjects,
 };

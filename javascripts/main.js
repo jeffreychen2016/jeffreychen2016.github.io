@@ -6,6 +6,7 @@ const initializeApp = () => {
   events.moveToSection();
   events.getDifferentBlogs();
   events.blogOnTapEvent();
+  events.projectPaginationEvent();
 };
 
 initializeApp();
