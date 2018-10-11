@@ -29,6 +29,46 @@
       "available": true,
       "url": "https://ex-tracker-6d3ea.firebaseapp.com",
       "github": "https://github.com/jeffreychen2016/ex-tracker"
+    },
+    {
+      "projectId": 4,
+      "title": "Ex-Tracker",
+      "thumbnail": "./imgs/ex-tracker.png",
+      "description": "This app is designed to avoid running into ex, so it needs to display a comprehensive list of all locations that ex frequents.",
+      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://ex-tracker-6d3ea.firebaseapp.com",
+      "github": "https://github.com/jeffreychen2016/ex-tracker"
+    },
+    {
+      "projectId": 5,
+      "title": "Ex-Tracker",
+      "thumbnail": "./imgs/ex-tracker.png",
+      "description": "This app is designed to avoid running into ex, so it needs to display a comprehensive list of all locations that ex frequents.",
+      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://ex-tracker-6d3ea.firebaseapp.com",
+      "github": "https://github.com/jeffreychen2016/ex-tracker"
+    },
+    {
+      "projectId": 6,
+      "title": "Ex-Tracker",
+      "thumbnail": "./imgs/ex-tracker.png",
+      "description": "This app is designed to avoid running into ex, so it needs to display a comprehensive list of all locations that ex frequents.",
+      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://ex-tracker-6d3ea.firebaseapp.com",
+      "github": "https://github.com/jeffreychen2016/ex-tracker"
+    },
+    {
+      "projectId": 7,
+      "title": "Ex-Tracker",
+      "thumbnail": "./imgs/ex-tracker.png",
+      "description": "This app is designed to avoid running into ex, so it needs to display a comprehensive list of all locations that ex frequents.",
+      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "available": true,
+      "url": "https://ex-tracker-6d3ea.firebaseapp.com",
+      "github": "https://github.com/jeffreychen2016/ex-tracker"
     }
   ]
 }

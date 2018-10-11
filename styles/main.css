@@ -147,7 +147,7 @@ p {
 #section-a,
 #section-b,
 #section-c {
-    position: relative;
+    position: static;
     background: #eaeaea;
     color: #fff;
     padding-bottom: 2em;
@@ -161,12 +161,6 @@ p {
 }
 
 /* ------------------- pagination  ------------------- */
-.pagination-container {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%)
-}
 
 /* ------------------- Section - a - Blog  ------------------- */
 

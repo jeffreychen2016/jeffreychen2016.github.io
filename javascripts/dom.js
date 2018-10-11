@@ -11,7 +11,7 @@ const generateRondomNumbers = (ArrayLength,numbersNeeded) => {
   return arr;
 };
 
-const printPagination = () => {
+const printProjectPaginationController = (projectData) => {
   let domString = '';
   domString += '<nav aria-label="Page navigation example" class="pagination-container">';
   domString +=   '<ul class="pagination">';
@@ -21,9 +21,9 @@ const printPagination = () => {
   domString +=         '<span class="sr-only">Previous</span>';
   domString +=       '</a>';
   domString +=     '</li>';
-  domString +=     '<li class="page-item"><a class="page-link" href="#">1</a></li>';
-  domString +=     '<li class="page-item"><a class="page-link" href="#">2</a></li>';
-  domString +=     '<li class="page-item"><a class="page-link" href="#">3</a></li>';
+  domString +=     '<li class="page-item"><a class="page-link">1</a></li>';
+  domString +=     '<li class="page-item"><a class="page-link">2</a></li>';
+  domString +=     '<li class="page-item"><a class="page-link">3</a></li>';
   domString +=       '<li class="page-item">';
   domString +=         '<a class="page-link" href="#" aria-label="Next">';
   domString +=           '<span aria-hidden="true">&raquo;</span>';
@@ -33,6 +33,7 @@ const printPagination = () => {
   domString +=     '</ul>';
   domString +=   '</nav>';
 
+  printProjects(projectData,0);
   $('#section-a').append(domString);
 };
 
@@ -61,9 +62,14 @@ const printBlogs = (blogData,blogsNeeded) => {
   $('#blogs-wrappper').html(domString);
 };
 
-const printProjects = (projectData) => {
+const printProjects = (projectData,page) => {
   let domString = '';
-  for (let i = 0; i < projectData.length; i++) {
+  for (let i = (page * 6); i < (page * 6 + 6); i++) {
+    if (projectData[i] === undefined)
+    {
+      break;
+    };
+
     domString += `<div class="project-card col-sm-6 col-md-4">`;
     domString +=  `<div class="thumbnail">`;
     domString +=    `<div class="project-links">`;
@@ -86,12 +92,11 @@ const printProjects = (projectData) => {
     domString +=  `</div>`;
     domString += `</div>`;
   };
-  printPagination();
 
   $('#project-row').append(domString);
 };
 
 module.exports = {
   printBlogs,
-  printProjects,
+  printProjectPaginationController,
 };
