@@ -94,26 +94,66 @@ const blogOnTapEvent = () => {
   });
 };
 
-const selectCurrentPageEvent = () => {
-  $(document).on('click','.page-item', (e) => {
-    $('.pagination-page-link').removeClass('default-page-selected');
-    $('.pagination-page-link').removeClass('page-selected');
-    $(e.target).addClass('page-selected');
-  });
+const flagCurrentPageEvent = (e) => {
+  $('.pagination-page-link').removeClass('default-page-selected');
+  $('.pagination-page-link').removeClass('page-selected');
+  $(e.target).addClass('page-selected');
 };
 
 const projectPaginationEvent = () => {
-  $(document).on('click','.page-item', (e) => {
+  $(document).on('click','.project-page', (e) => {
     const page = $(e.target).text() * 1;
     firebaseAPI.getProjectsFromDB()
       .then((projectData) => {
         moveToSection();
-        selectCurrentPageEvent();
+        flagCurrentPageEvent(e);
         dom.printProjects(projectData,page);
       })
       .catch((err) => {
         console.error(err);
       });
+  });
+};
+
+const prevPageEvent = () => {
+  $(document).on('click','.prev-page', () => {
+    const currentPage = $('.page-selected').text() * 1;
+    const prevPage = currentPage - 1;
+
+    if (currentPage !== 1) {
+      $('.pagination-page-link').removeClass('page-selected');
+      $(`#page-${prevPage}`).addClass('page-selected');
+
+      firebaseAPI.getProjectsFromDB()
+        .then((projectData) => {
+          dom.printProjects(projectData,prevPage);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+  });
+};
+// if $('.page-selected')[0] is undefine
+// that means the page indeicator is on page 1
+const nextPageEvent = () => {
+  $(document).on('click','.next-page', () => {
+    const currentPage = $('.page-selected')[0] === undefined ? 1 : $('.page-selected').text() * 1;
+    const nextPage = currentPage + 1;
+
+    if (currentPage !== 2) {
+      $('.pagination-page-link').removeClass('default-page-selected');
+      $('.pagination-page-link').removeClass('page-selected');
+      $(`#page-${nextPage}`).addClass('page-selected');
+
+      firebaseAPI.getProjectsFromDB()
+        .then((projectData) => {
+          dom.printProjects(projectData,2);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
   });
 };
 
@@ -124,5 +164,6 @@ module.exports = {
   getDifferentBlogs,
   blogOnTapEvent,
   projectPaginationEvent,
-  selectCurrentPageEvent,
+  prevPageEvent,
+  nextPageEvent,
 };
