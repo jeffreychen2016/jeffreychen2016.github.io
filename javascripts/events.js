@@ -96,7 +96,8 @@ const blogOnTapEvent = () => {
 
 const selectCurrentPageEvent = () => {
   $(document).on('click','.page-item', (e) => {
-    $('.page-selected').removeClass('page-selected');
+    $('.pagination-page-link').removeClass('default-page-selected');
+    $('.pagination-page-link').removeClass('page-selected');
     $(e.target).addClass('page-selected');
   });
 };

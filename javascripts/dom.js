@@ -23,7 +23,7 @@ const printProjectPaginationController = (projectData) => {
   domString +=       '</a>';
   domString +=     '</li>';
   for (let i = 0; i < numberOfPageNeeded; i++) {
-    domString +=     `<li class="page-item"><a class="page-link pagination-page-link page-selected">${i + 1}</a></li>`;
+    domString +=     `<li class="page-item"><a class="page-link pagination-page-link default-page-selected">${i + 1}</a></li>`;
   };
   domString +=       '<li class="page-item">';
   domString +=         '<a class="page-link pagination-page-link" href="#" aria-label="Next">';

@@ -161,6 +161,10 @@ p {
 }
 
 /* ------------------- pagination  ------------------- */
+.pagination li:nth-child(2) .default-page-selected {
+    background-color: lightgrey;
+}
+
 .pagination li .page-selected {
     cursor: pointer;
     background-color: lightgrey;
