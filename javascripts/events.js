@@ -140,15 +140,16 @@ const nextPageEvent = () => {
   $(document).on('click','.next-page', () => {
     const currentPage = $('.page-selected')[0] === undefined ? 1 : $('.page-selected').text() * 1;
     const nextPage = currentPage + 1;
+    const maxPage = $('.project-page').length;
 
-    if (currentPage !== 2) {
+    if (currentPage !== maxPage) {
       $('.pagination-page-link').removeClass('default-page-selected');
       $('.pagination-page-link').removeClass('page-selected');
       $(`#page-${nextPage}`).addClass('page-selected');
 
       firebaseAPI.getProjectsFromDB()
         .then((projectData) => {
-          dom.printProjects(projectData,2);
+          dom.printProjects(projectData,maxPage);
         })
         .catch((err) => {
           console.error(err);
