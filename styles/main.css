@@ -166,8 +166,11 @@ p {
 }
 
 .pagination li .page-selected {
-    cursor: pointer;
     background-color: lightgrey;
+}
+
+.pagination li a {
+    cursor: pointer;
 }
 
 /* ------------------- Section - a - Blog  ------------------- */
