@@ -161,6 +161,17 @@ p {
 }
 
 /* ------------------- pagination  ------------------- */
+.pagination li:nth-child(2) .default-page-selected {
+    background-color: lightgrey;
+}
+
+.pagination li .page-selected {
+    background-color: lightgrey;
+}
+
+.pagination li a {
+    cursor: pointer;
+}
 
 /* ------------------- Section - a - Blog  ------------------- */
 
@@ -516,6 +527,17 @@ a.browser-icon {
     }
 
     /* ---------- Project ---------- */
+    #section-a {
+        position: relative;
+    }
+
+    #section-a .pagination-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .project-description p {
         font-size: 1em;
     }

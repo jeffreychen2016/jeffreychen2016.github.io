@@ -12,20 +12,21 @@ const generateRondomNumbers = (ArrayLength,numbersNeeded) => {
 };
 
 const printProjectPaginationController = (projectData) => {
+  const numberOfPageNeeded = Math.ceil(projectData.length / 6);
   let domString = '';
   domString += '<nav aria-label="Page navigation example" class="pagination-container">';
   domString +=   '<ul class="pagination">';
   domString +=     '<li class="page-item">';
-  domString +=       '<a class="page-link" href="#" aria-label="Previous">';
+  domString +=       '<a class="page-link pagination-page-link prev-page"  aria-label="Previous">';
   domString +=         '<span aria-hidden="true">&laquo;</span>';
   domString +=         '<span class="sr-only">Previous</span>';
   domString +=       '</a>';
   domString +=     '</li>';
-  domString +=     '<li class="page-item"><a class="page-link">1</a></li>';
-  domString +=     '<li class="page-item"><a class="page-link">2</a></li>';
-  domString +=     '<li class="page-item"><a class="page-link">3</a></li>';
+  for (let i = 0; i < numberOfPageNeeded; i++) {
+    domString +=     `<li class="page-item"><a class="page-link pagination-page-link default-page-selected project-page" id="page-${i + 1}">${i + 1}</a></li>`;
+  };
   domString +=       '<li class="page-item">';
-  domString +=         '<a class="page-link" href="#" aria-label="Next">';
+  domString +=         '<a class="page-link pagination-page-link next-page" aria-label="Next">';
   domString +=           '<span aria-hidden="true">&raquo;</span>';
   domString +=           '<span class="sr-only">Next</span>';
   domString +=         '</a>';

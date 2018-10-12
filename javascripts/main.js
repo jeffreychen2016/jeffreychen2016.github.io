@@ -7,6 +7,8 @@ const initializeApp = () => {
   events.getDifferentBlogs();
   events.blogOnTapEvent();
   events.projectPaginationEvent();
+  events.prevPageEvent();
+  events.nextPageEvent();
 };
 
 initializeApp();
