@@ -530,7 +530,10 @@ a.browser-icon {
         animation-fill-mode: forwards;
     }  
     
-    #section-a,
+    #section-a {
+        height: 750px;
+    }
+    
     #section-b,
     #blog-bg-image {
         height: 95vh;
