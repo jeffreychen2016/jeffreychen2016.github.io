@@ -160,6 +160,10 @@ p {
     font-weight: 700;
 }
 
+.content-title {
+    font-size: 4em;
+}
+
 /* ------------------- pagination  ------------------- */
 .pagination li:nth-child(2) .default-page-selected {
     background-color: lightgrey;
@@ -411,12 +415,15 @@ a.browser-icon {
     color: #333;
 }
 
-#skills-wrappper {
+#front-end-skill {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
+    width: 100%;
+}
+
+#front-end-header {
+    padding-top: 0;
 }
 
 .skill-icon {
@@ -424,6 +431,10 @@ a.browser-icon {
     width: 120px;
     height: 120px;
     margin: 5px;
+}
+
+.checked {
+    color: orange;
 }
 
 /* ------------------- Footer ------------------- */
@@ -521,7 +532,6 @@ a.browser-icon {
     
     #section-a,
     #section-b,
-    #section-c,
     #blog-bg-image {
         height: 95vh;
     }
@@ -545,5 +555,33 @@ a.browser-icon {
     /* ---------- Blog ---------- */
     .blog-card p {
         font-size: 1em;
+    }
+
+    /* ---------- Skill ---------- */
+    #skills-wrappper {
+        width: 70%;
+        margin: auto;
+    }
+
+    #front-end-skill,
+    #back-end-skill {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .skill-icon {
+        margin: auto;
+    }
+
+    .individual-skill-container {
+        min-width: 30%;
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
+    .individual-skill-container h4 {
+        font-size: 1.4em;
     }
 } 
