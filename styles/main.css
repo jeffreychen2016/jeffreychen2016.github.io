@@ -411,12 +411,11 @@ a.browser-icon {
     color: #333;
 }
 
-#skills-wrappper {
+#front-end-skill {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
+    width: 100%;
 }
 
 .skill-icon {
@@ -521,7 +520,6 @@ a.browser-icon {
     
     #section-a,
     #section-b,
-    #section-c,
     #blog-bg-image {
         height: 95vh;
     }
@@ -548,6 +546,11 @@ a.browser-icon {
     }
 
     /* ---------- Skill ---------- */
+    #skills-wrappper {
+        width: 70%;
+        margin: auto;
+    }
+
     #front-end-skill,
     #back-end-skill {
         width: 90%;
@@ -556,28 +559,21 @@ a.browser-icon {
         justify-content: space-between;
     }
 
+    .skill-icon {
+        margin: auto;
+    }
+
     .individual-skill-container {
+        min-width: 30%;
         width: 30%;
+        margin-bottom: 10px;
     }
 
-    .individual-skill-container-left-col {
-        float: left;
+    .individual-skill-container h4 {
+        font-size: 1.4em;
     }
 
-    .individual-skill-container-right-col {
-        float: left;
-        width: 50%;
-    }
-
-    .progress-container {
-        height: 0.7em;
-        background-color: #deeef5;
-        width: 100%;
-    }
-
-    #HTML-progress-bar {
-        height: 0.7em;
-        width: 90%;
-        background-color: black;
+    .checked {
+        color: orange;
     }
 } 
