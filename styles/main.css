@@ -160,6 +160,10 @@ p {
     font-weight: 700;
 }
 
+.content-title {
+    font-size: 4em;
+}
+
 /* ------------------- pagination  ------------------- */
 .pagination li:nth-child(2) .default-page-selected {
     background-color: lightgrey;
@@ -418,11 +422,19 @@ a.browser-icon {
     width: 100%;
 }
 
+#front-end-header {
+    padding-top: 0;
+}
+
 .skill-icon {
     display: block;
     width: 120px;
     height: 120px;
     margin: 5px;
+}
+
+.checked {
+    color: orange;
 }
 
 /* ------------------- Footer ------------------- */
@@ -571,9 +583,5 @@ a.browser-icon {
 
     .individual-skill-container h4 {
         font-size: 1.4em;
-    }
-
-    .checked {
-        color: orange;
     }
 } 
