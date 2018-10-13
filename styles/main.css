@@ -546,4 +546,38 @@ a.browser-icon {
     .blog-card p {
         font-size: 1em;
     }
+
+    /* ---------- Skill ---------- */
+    #front-end-skill,
+    #back-end-skill {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .individual-skill-container {
+        width: 30%;
+    }
+
+    .individual-skill-container-left-col {
+        float: left;
+    }
+
+    .individual-skill-container-right-col {
+        float: left;
+        width: 50%;
+    }
+
+    .progress-container {
+        height: 0.7em;
+        background-color: #deeef5;
+        width: 100%;
+    }
+
+    #HTML-progress-bar {
+        height: 0.7em;
+        width: 90%;
+        background-color: black;
+    }
 } 
