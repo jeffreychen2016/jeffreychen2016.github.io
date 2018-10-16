@@ -415,7 +415,8 @@ a.browser-icon {
     color: #333;
 }
 
-#front-end-skill {
+#front-end-skill,
+#back-end-skill {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
