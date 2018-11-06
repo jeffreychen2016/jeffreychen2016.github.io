@@ -411,15 +411,14 @@ a.browser-icon {
 
 /* ------------------- Skills ------------------- */
 #section-c {
-    position: relative;
+    position: relative;  
     color: #333;
 }
 
 #front-end-skill,
 #back-end-skill {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
     width: 100%;
 }
 
@@ -432,6 +431,7 @@ a.browser-icon {
     width: 120px;
     height: 120px;
     margin: 5px;
+    margin: auto;
 }
 
 .checked {
@@ -563,6 +563,7 @@ a.browser-icon {
 
     /* ---------- Skill ---------- */
     #skills-wrappper {
+        position: relative;  
         width: 70%;
         margin: auto;
     }
@@ -571,8 +572,8 @@ a.browser-icon {
     #back-end-skill {
         width: 90%;
         margin: auto;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
 
     .skill-icon {
@@ -581,7 +582,7 @@ a.browser-icon {
 
     .individual-skill-container {
         min-width: 30%;
-        width: 30%;
+        width: 100%;
         margin-bottom: 10px;
     }
 
