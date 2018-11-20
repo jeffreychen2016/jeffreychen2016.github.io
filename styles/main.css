@@ -104,7 +104,6 @@ p {
     animation-fill-mode: forwards;
 }
 
-
 @keyframes type {
     0% {
         width: 0;
@@ -141,6 +140,7 @@ p {
         border-color: transparent;
     }
 }
+
 
 /* ------------------- Sections  ------------------- */
 

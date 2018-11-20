@@ -32,13 +32,13 @@
     },
     {
       "projectId": 4,
-      "title": "Ex-Tracker",
-      "thumbnail": "./imgs/ex-tracker.png",
-      "description": "This app is designed to avoid running into ex, so it needs to display a comprehensive list of all locations that ex frequents.",
+      "title": "Quick-Quote",
+      "thumbnail": "./imgs/quick-quote.png",
+      "description": "This app is designed to help customers place new orders, manage existing orders, and analyze purchases easily. It is a mini version of e-commerce app.",
       "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
       "available": true,
-      "url": "https://ex-tracker-6d3ea.firebaseapp.com",
-      "github": "https://github.com/jeffreychen2016/ex-tracker"
+      "url": "https://ollert-b16a7.firebaseapp.com/myorder",
+      "github": "https://github.com/jeffreychen2016/capstone-quickquote"
     },
     {
       "projectId": 5,
