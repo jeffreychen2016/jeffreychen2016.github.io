@@ -35,20 +35,20 @@
       "title": "Quick-Quote",
       "thumbnail": "./imgs/quick-quote.png",
       "description": "This app is designed to help customers place new orders, manage existing orders, and analyze purchases easily. It is a mini version of e-commerce app.",
-      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS, React and Version Control with Github",
       "available": true,
       "url": "https://ollert-b16a7.firebaseapp.com/myorder",
       "github": "https://github.com/jeffreychen2016/capstone-quickquote"
     },
     {
       "projectId": 5,
-      "title": "Ex-Tracker",
-      "thumbnail": "./imgs/ex-tracker.png",
-      "description": "This app is designed to avoid running into ex, so it needs to display a comprehensive list of all locations that ex frequents.",
-      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS Animations, Version Control with Github",
+      "title": "Study-Tracker",
+      "thumbnail": "./imgs/study-tracker.png",
+      "description": "This app is designed help my girl-friend track her daily study time. She can clock in and clock out to log her time. Once clock out, the time she spent will be accumulated on top of previous time. She can then allocate time to each subject she studied each day.",
+      "technologiesUsed": "API, jQuery, AJAX and JSON, Task Automation, CSS, React and Version Control with Github",
       "available": true,
-      "url": "https://ex-tracker-6d3ea.firebaseapp.com",
-      "github": "https://github.com/jeffreychen2016/ex-tracker"
+      "url": "https://study-tracker-8f1fc.firebaseapp.com/",
+      "github": "https://github.com/jeffreychen2016/study-tracker"
     },
     {
       "projectId": 6,
