@@ -9,7 +9,7 @@ const dom = require('./dom');
 const getBlogsEvent = () => {
   firebaseAPI.getBlogsFromDB()
     .then((blogData) => {
-      dom.printBlogs(blogData,4);
+      dom.printBlogs(blogData,6);
     })
     .catch((err) => {
       console.error(err);
