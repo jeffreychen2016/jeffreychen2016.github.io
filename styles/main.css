@@ -186,7 +186,7 @@ p {
 
 #blog-bg-image {
     position: absolute;
-    background-color: #333;
+    background: linear-gradient(360deg, #01a99c 10%, #0698b1 360%);
     /* background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/blog-background.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
