@@ -186,7 +186,8 @@ p {
 
 #blog-bg-image {
     position: absolute;
-    background: linear-gradient(360deg, #01a99c 10%, #0698b1 360%);
+    /* background: linear-gradient(360deg, #01a99c 10%, #0698b1 360%); */
+    background-color: rgb(66, 125, 244);
     /* background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../imgs/blog-background.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -457,26 +458,43 @@ a.browser-icon {
     width: 100%;
 }
 
-#my-email {
-    font-size: 2em;
-    padding: 1% 5%;
-    text-align: center;
+#my-email,
+#my-number,
+#my-linkedin {
+    padding-bottom: 15px;
 }
 
-#my-email span {
-    top: 5px;
-    left: -5px;
-}
-
-#my-number span {
-    top: 3px;
-    left: -5px;
-}
-
-#my-number {
-    font-size: 1.5em;
-    text-decoration: none;
+#my-linkedin {
     padding-top: 0px;
+}
+
+#email-logo,
+#phone-logo,
+#linkedin-logo {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+#email-address,
+#phone-number,
+#linkedin-url {
+    display: inline-block!important;
+    font-size: 2em;
+}
+
+#linkedin-url {
+    width: 400px!important;
+}
+
+#email-address {
+    width: 290px!important;
+}
+
+#phone-number {
+    width: 160px!important;
+    text-decoration: none;
 }
 
 #thankyou-msg {
